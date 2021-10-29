@@ -3,15 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 9045",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 9045",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "12.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "sass": "^1.43.4",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "eslint": "7",
