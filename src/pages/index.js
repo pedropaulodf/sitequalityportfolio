@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { Footer } from '../components/Footer'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
@@ -17,12 +18,8 @@ export default function Home() {
           <button type="button">Clique e saiba mais</button>
         </section>
       </main>
-
-      <footer>
-        <p>
-          © 2021 Quality Systems LTDA • Todos os direitos reservados.
-        </p>
-      </footer>
+      
+      <Footer/>
     </>
   )
 }

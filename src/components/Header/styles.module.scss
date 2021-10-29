@@ -1,23 +1,68 @@
 .container {
 
   width: 100%;
-  max-width: 1200px;
+  border-bottom: 1px solid var(--blue-500);
+  padding: 0rem 2rem;
 
-  .userIcon{
-    width: 20px;
-    height: 20px;
+  div.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 
-    margin-right: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: max-content;
+      align-self: flex-start;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      
+      .navLink {
+        margin-left: 1rem;
+        font-size: 1.1rem;
+      }
+
+    }
   }
-  
+
   button {
     background-color: #3E7CC5;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
     color: var(--white);
+
+    border-radius: 0rem 0rem 0.7rem 0.7rem;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      filter: brightness(0.9);
+      padding-top: 0.8rem;
+    }
+
+    .userIcon{
+      width: 20px;
+      height: 20px;
+
+      margin-right: 0.5rem;
+    }
+    
   }
 
 }
