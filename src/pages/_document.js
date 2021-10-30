@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-// O _DOCUMENT RODA APENAS UMA VEZ AO CARREGAR O PROJETO
+// O _document RODA APENAS UMA VEZ AO CARREGAR O PROJETO
 export default class MyDocument extends Document {
   render() {
     return (
