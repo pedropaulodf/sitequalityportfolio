@@ -38,7 +38,9 @@ export default function Home() {
                 <strong>clubes, agremiações, sindicatos</strong> e{" "}
                 <strong>academias</strong>.
               </p>
-              <button type="button">Clique e saiba mais</button>
+              <a href="#saibamais">
+                <button type="button">Clique e saiba mais</button>
+              </a>
             </div>
             <div className={styles.sliderWrapper}>
               <div className={styles.bgSliderCircle}></div>
@@ -72,7 +74,7 @@ export default function Home() {
         </section>
 
         {/* POR QUE A QUALITY */}
-        <section className={styles.wrapperWhyQuality}>
+        <section className={styles.wrapperWhyQuality} id="saibamais">
           <div className={styles.content}>
             <h3>Por quê o Quality Automação de Clubes?</h3>
             <div className={styles.gridBoxes}>

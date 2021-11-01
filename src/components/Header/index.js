@@ -11,6 +11,7 @@ export function Header() {
         <nav>
           <Link href="/" ><a className={styles.navLink}>Início</a></Link>
           <Link href="/sobre" ><a className={styles.navLink}>Sobre a Quality</a></Link>
+          <Link href="/produtos" ><a className={styles.navLink}>Produtos</a></Link>
           <Link href="/contato" ><a className={styles.navLink}>Contato</a></Link>
         </nav>
         {/* <SignInButton/> */}
