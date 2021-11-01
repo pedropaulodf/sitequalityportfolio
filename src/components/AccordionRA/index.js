@@ -16,6 +16,7 @@ import {
 } from "react-icons/fi";
 import styles from "./styles.module.scss";
 
+// React Accessible Accordion
 export function AccordionRA() {
   return (
     <Accordion className={styles.accordion} preExpanded={["1"]}>
