@@ -1,12 +1,166 @@
 .container {
 
-  width: 100%;
-  padding: 0rem 2rem;
-
-  .wrapper{
+  .wrapperBanner {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
+    background-color: var(--blue-20); //20
+
+    .banner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 0.9fr 1fr;
+      gap: 0 1rem;
+
+      .info {
+        h1 {
+          font-size: 4rem;
+          color: var(--blue-500);
+          line-height: 4rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+          color: var(--gray-500);
+          margin: 1rem 0;
+        }
+
+        button {
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          background-color: var(--blue-500-70);
+          color: var(--blue-500);
+          font-size: 1.2rem;
+
+          transition: all 0.2s ease;
+
+          &:hover {
+            filter: brightness(0.7);
+          }
+
+          &:active {
+            transform: translateY(3px);
+          }
+        }
+      }
+
+      .sliderWrapper {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bgSliderCircle {
+          width: 50%;
+          min-width: 400px;
+          height: 120%;
+          border-radius: 100%;
+
+          background-color: #3e7cc530;
+
+          position: absolute;
+          z-index: 0;
+        }
+
+        .slider {
+          background-color: #4b637e;
+
+          width: 80%;
+          height: 100%;
+          margin: 0 auto;
+          border-radius: 0.5rem;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          z-index: 1;
+
+          .btnPrevNext {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin: 0 -25px;
+            background-color: var(--blue-500);
+            box-shadow: 0px 0px 10px 0px #00000050;
+            font-size: 1rem;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all 0.2s ease;
+
+            /* Seta da esquerda */
+            &:first-child {
+              &:active {
+                transform: translateX(-6px);
+              }
+            }
+
+            /* Seta da direita */
+            &:active {
+              transform: translateX(6px);
+            }
+
+            svg {
+              color: white;
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  // Faixa Clientes da Quality
+  .wrapperCustomers{
+    width: 100%;
+    background-color: #F7FAFD;
+
+    margin-top: 1.5rem;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 1080px) {}
+
+@media (max-width: 720px) {
+  .container {
+    .wrapperBanner {
+      .banner {
+        gap: 2rem 0rem;
+        grid-template-columns: 1fr;
+
+        .sliderWrapper {
+          .slider {
+            width: 100%;
+            min-height: 300px;
+            
+            .btnPrevNext {
+              margin: 0 -15px;
+            }
+          }
+          
+        .bgSliderCircle {
+          width: 90vw;
+          height: 110%;
+          min-width: 100%;
+        }
+        }
+      }
+    }
   }
 }
