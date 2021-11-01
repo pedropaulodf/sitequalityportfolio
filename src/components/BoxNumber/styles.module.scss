@@ -11,13 +11,13 @@
   background-color: var(--white);
 
   &:hover {
-    transform: translateY(-10px) scale(1.05,1.05);
+    transform: translateY(-10px) scale(1.02,1.02);
     box-shadow: 0px 9px 11px rgba(0, 0, 0, 0.10);
   }
 
   p:first-child {
     font-weight: 700;
-    background-color: var(--blue-500);
+    background-color: var(--blue-400);
     color: var(--white);
     width: fit-content;
     padding: 1rem 1.5rem;

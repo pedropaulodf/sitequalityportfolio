@@ -1,6 +1,6 @@
 import { Footer } from "../components/Footer";
 
-export default function Sobre(){
+export default function Produtos(){
 
   return (
     <div>

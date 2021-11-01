@@ -254,9 +254,45 @@
       }
     }
   }
+
+  // Recursos
+  .wrapperResources {
+    width: 100%;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem 2rem;
+
+      h3 {
+        color: var(--gray-600);
+        text-align: center;
+        margin: 1rem 0 3rem 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        padding-top: 2rem;
+
+        div img {
+          width: 100%;
+          margin-top: -1rem;
+        }
+      }
+    }
+  }
 }
 
-@media (max-width: 1080px) {
+.btnGreenContact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem 5rem 1rem;
 }
 
 @media (max-width: 720px) {
@@ -297,12 +333,36 @@
 
     // Diferenciais
     .wrapperDiferentials {
-
       .content {
+
+        padding: 3rem 2rem 4rem 2rem;
+
         .gridBoxes {
           grid-template-columns: repeat(1, 1fr);
           gap: 1rem;
-          padding-top: 1rem;
+          padding-top: 2rem;
+        }
+      }
+    }
+
+    // Recursos
+    .wrapperResources {
+      .content {
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding-top: 0rem;
+
+          .imgResources {
+            display: none;
+          }
+
+          div img {
+            width: 40%;
+            margin: 0 auto;
+            margin-top: -1rem;
+          }
         }
       }
     }

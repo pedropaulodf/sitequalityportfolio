@@ -7,7 +7,7 @@ export function BoxIconLeft({icon, title, content}){
       <div className={styles.icon}>
         {icon}
       </div>
-      <div>
+      <div className={styles.content}>
         <h4>{title}</h4>
         <p>{content}</p>
       </div>

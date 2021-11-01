@@ -16,7 +16,7 @@
   }
 
   div:first-child {
-    background-color: #689CDA;
+    background-color: var(--blue-400);
     float: left;
     height: 100%;
     display: flex;
@@ -24,6 +24,10 @@
     padding: 0 1rem;
     margin-right: 1.5rem;
     border-radius: 0.7rem 0 0 0.7rem;
+  }
+
+  .content {
+    
   }
 
   .icon {
