@@ -1,5 +1,4 @@
 .container {
-
   .wrapperBanner {
     width: 100%;
     background-color: var(--blue-20); //20
@@ -31,7 +30,7 @@
         button {
           padding: 1rem 2rem;
           border-radius: 0.5rem;
-          background-color: var(--blue-500-70);
+          background-color: var(--blue-500-40);
           color: var(--blue-500);
           font-size: 1.2rem;
 
@@ -70,7 +69,7 @@
           background-color: #4b637e;
 
           width: 80%;
-          height: 100%;
+          height: 90%;
           margin: 0 auto;
           border-radius: 0.5rem;
 
@@ -116,13 +115,12 @@
         }
       }
     }
-
   }
 
   // Faixa Clientes da Quality
-  .wrapperCustomers{
+  .wrapperCustomers {
     width: 100%;
-    background-color: #F7FAFD;
+    background-color: #f7fafd;
 
     margin-top: 1.5rem;
 
@@ -131,11 +129,135 @@
       margin: 0 auto;
       position: relative;
       padding: 2rem 2rem;
+
+      h3 {
+        color: var(--gray-600);
+        text-align: center;
+        margin: 0 0 2rem 0;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      // TEMPORÁRIO
+      .sliderWrapper {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slider {
+          background-color: #4b637e;
+
+          width: 100%;
+          height: 90%;
+          min-height: 100px;
+          margin: 0 auto;
+          border-radius: 0.5rem;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          z-index: 1;
+
+          .btnPrevNext {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin: 0 -25px;
+            background-color: var(--blue-500);
+            box-shadow: 0px 0px 10px 0px #00000050;
+            font-size: 1rem;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all 0.2s ease;
+
+            /* Seta da esquerda */
+            &:first-child {
+              &:active {
+                transform: translateX(-6px);
+              }
+            }
+
+            /* Seta da direita */
+            &:active {
+              transform: translateX(6px);
+            }
+
+            svg {
+              color: white;
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+      // TEMPORÁRIO
+    }
+  }
+
+  // Por que a Quality
+  .wrapperWhyQuality {
+    width: 100%;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem 2rem;
+
+      h3 {
+        color: var(--gray-600);
+        text-align: center;
+        margin: 1rem 0 3rem 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      .gridBoxes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  // Diferenciais
+  .wrapperDiferentials {
+    width: 100%;
+    background-color: #eef4fc;
+    margin-top: 2rem;
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      padding: 3rem 3rem 4rem 3rem;
+
+      h3 {
+        color: var(--blue-500);
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      .gridBoxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        padding-top: 2rem;
+      }
     }
   }
 }
 
-@media (max-width: 1080px) {}
+@media (max-width: 1080px) {
+}
 
 @media (max-width: 720px) {
   .container {
@@ -148,17 +270,39 @@
           .slider {
             width: 100%;
             min-height: 300px;
-            
+
             .btnPrevNext {
               margin: 0 -15px;
             }
           }
-          
-        .bgSliderCircle {
-          width: 90vw;
-          height: 110%;
-          min-width: 100%;
+
+          .bgSliderCircle {
+            width: 90vw;
+            height: 110%;
+            min-width: 100%;
+          }
         }
+      }
+    }
+
+    // Por que a Quality
+    .wrapperWhyQuality {
+      .content {
+        .gridBoxes {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+        }
+      }
+    }
+
+    // Diferenciais
+    .wrapperDiferentials {
+
+      .content {
+        .gridBoxes {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 1rem;
+          padding-top: 1rem;
         }
       }
     }
