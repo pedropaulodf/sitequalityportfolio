@@ -9,10 +9,10 @@ export function Header() {
       <div className={styles.wrapper}>
         <img src="/images/logo.png" alt="Logo Quality Systems" />
         <nav>
-          <Link href="/" ><a className={styles.navLink}>Início</a></Link>
-          <Link href="/sobre" ><a className={styles.navLink}>Sobre a Quality</a></Link>
-          <Link href="/produtos" ><a className={styles.navLink}>Produtos</a></Link>
-          <Link href="/contato" ><a className={styles.navLink}>Contato</a></Link>
+          <Link href="/" ><a className={styles.active}>Início</a></Link>
+          <Link href="/sobre" ><a>Sobre a Quality</a></Link>
+          <Link href="/produtos" ><a>Produtos</a></Link>
+          <Link href="/contato" ><a>Contato</a></Link>
         </nav>
         {/* <SignInButton/> */}
         <button type="button">
