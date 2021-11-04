@@ -1,51 +1,22 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { FiUser } from "react-icons/fi";
 
 import styles from "./styles.module.scss";
 
 export function Header() {
   
-  const [menuSelecionado, setMenuSelecionado] = useState({
-    inicio: true,
-    sobre: false,
-    produtos: false,
-    contato: false,
-  });
-
-  useEffect(() => {
-    switch (window.location.pathname) {
-      case '/':
-        setMenuSelecionado({...menuSelecionado, inicio: true});
-        break;
-    
-      case '/sobre':
-        setMenuSelecionado({...menuSelecionado, sobre: true});
-        break;
-    
-      case '/produtos':
-        setMenuSelecionado({...menuSelecionado, produtos: true});
-        break;
-    
-      case '/contato':
-        setMenuSelecionado({...menuSelecionado, contato: true});
-        break;
-    
-      default:
-        setMenuSelecionado({...menuSelecionado, inicio: true});
-        break;
-    }
-  },[])
+  const router = useRouter();
 
   return (
     <header className={styles.container}>
       <div className={styles.wrapper}>
         <img src="/images/logo.png" alt="Logo Quality Systems" />
         <nav>
-          <Link href="/" ><a className={menuSelecionado.inicio && styles.active}>Início</a></Link>
-          <Link href="/sobre" ><a className={menuSelecionado.sobre && styles.active}>Sobre a Quality</a></Link>
-          <Link href="/produtos" ><a className={menuSelecionado.produtos && styles.active}>Produtos</a></Link>
-          <Link href="/contato" ><a className={menuSelecionado.contato && styles.active}>Contato</a></Link>
+          <Link href="/" ><a className={router.pathname === '/' && styles.active}>Início</a></Link>
+          <Link href="/sobre" ><a className={router.pathname === '/sobre' && styles.active}>Sobre a Quality</a></Link>
+          <Link href="/produtos" ><a className={router.pathname === '/produtos' && styles.active}>Produtos</a></Link>
+          <Link href="/contato" ><a className={router.pathname === '/contato' && styles.active}>Contato</a></Link>
         </nav>
         {/* <SignInButton/> */}
         <button type="button">
