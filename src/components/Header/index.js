@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FiUser } from "react-icons/fi";
+import ButtonModalClientArea from '../ButtonModalClientArea';
 
 import styles from "./styles.module.scss";
 
@@ -18,11 +18,7 @@ export function Header() {
           <Link href="/produtos" ><a className={router.pathname === '/produtos' && styles.active}>Produtos</a></Link>
           <Link href="/contato" ><a className={router.pathname === '/contato' && styles.active}>Contato</a></Link>
         </nav>
-        {/* <SignInButton/> */}
-        <button type="button">
-          <FiUser color="#FFFFFF" className={styles.userIcon} />
-          Área do Cliente
-        </button>
+        <ButtonModalClientArea/>
       </div>
     </header>
   );

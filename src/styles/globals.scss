@@ -60,3 +60,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+// Estilos do Placeholder 
+::-webkit-input-placeholder {
+  color: #3E7CC5;
+}
+:-ms-input-placeholder {
+  color: #3E7CC5;
+}
+::placeholder {
+  color: #3E7CC5;
+}
