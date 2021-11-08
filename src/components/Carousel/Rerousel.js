@@ -4,6 +4,7 @@ import React, {
   useState,
   useRef,
   Children,
+  RefObject
 } from "react";
 import { style } from "typestyle";
 

@@ -1,26 +1,20 @@
 import React, { useRef } from "react";
 import { Rerousel } from "./Rerousel";
 
-export const Carousel = () => {
+export const Carousel = (props) => {
   const customerLogo = useRef(null);
 
-  const customers = [
-    { image: "/images/carousel/logoGray.png" },
-    { image: "/images/carousel/logoGray.png" },
-    { image: "/images/carousel/logoGray.png" },
-    { image: "/images/carousel/logoGray.png" },
-    { image: "/images/carousel/logoGray.png" },
-    { image: "/images/carousel/logoGray.png" },
-  ];
+  const images = Array.from({ length: 5 }).fill(
+    "/images/carousel/logoGray.png"
+  );
 
   return (
-    <div>
-      <h1>Carousel</h1>
-      <Rerousel itemRef={customerLogo}>
-        {customers.map((c,index) => {
-          return <img key={index} image={c.image} ref={customerLogo} />;
+    <>
+      <Rerousel itemRef={customerLogo} interval={props.interval}>
+        {images.map((c, i) => {
+          return <img key={i} src={c} ref={customerLogo} />;
         })}
       </Rerousel>
-    </div>
+    </>
   );
 };

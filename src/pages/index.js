@@ -59,7 +59,7 @@ export default function Home() {
             <h3>Clientes que contam a Quality!</h3>
             <div className={styles.sliderWrapper}>
               <div className={styles.slider}>
-                <Carousel />
+                <Carousel interval={3000}/>
                 {/* <ButtonCircleArrow left bgColor="#656565" handleClick={() => console.log('click left')} />
                 <ButtonCircleArrow bgColor="#656565" onclick={() => console.log('click right')} /> */}
               </div>
