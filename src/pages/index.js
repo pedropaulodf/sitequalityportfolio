@@ -14,6 +14,7 @@ import {
 
 import styles from "../styles/Home.module.scss";
 import { ButtonCircleArrow } from "../components/ButtonCircleArrow";
+import SlideShow from "../components/SlideShow";
 
 export default function Home() {
   return (
@@ -45,8 +46,7 @@ export default function Home() {
             <div className={styles.sliderWrapper}>
               <div className={styles.bgSliderCircle}></div>
               <div className={styles.slider}>
-                <ButtonCircleArrow left handleClick={() => console.log('click left')} />
-                <ButtonCircleArrow handleClick={() => console.log('click right')} />
+                <SlideShow/>
               </div>
             </div>
           </div>
