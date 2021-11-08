@@ -5,6 +5,9 @@ import { AccordionRA } from "../components/AccordionRA";
 import { Footer } from "../components/Footer";
 import { ButtonOutlined } from "../components/ButtonOutlined";
 import { ButtonGreen } from "../components/ButtonGreen";
+import { ButtonCircleArrow } from "../components/ButtonCircleArrow";
+import { Carousel } from "../components/Carousel";
+import SlideShow from "../components/SlideShow";
 import {
   FiArrowLeft,
   FiArrowRight,
@@ -13,8 +16,6 @@ import {
 } from "react-icons/fi";
 
 import styles from "../styles/Home.module.scss";
-import { ButtonCircleArrow } from "../components/ButtonCircleArrow";
-import SlideShow from "../components/SlideShow";
 
 export default function Home() {
   return (
@@ -58,8 +59,9 @@ export default function Home() {
             <h3>Clientes que contam a Quality!</h3>
             <div className={styles.sliderWrapper}>
               <div className={styles.slider}>
-                <ButtonCircleArrow left bgColor="#656565" handleClick={() => console.log('click left')} />
-                <ButtonCircleArrow bgColor="#656565" onclick={() => console.log('click right')} />
+                <Carousel />
+                {/* <ButtonCircleArrow left bgColor="#656565" handleClick={() => console.log('click left')} />
+                <ButtonCircleArrow bgColor="#656565" onclick={() => console.log('click right')} /> */}
               </div>
             </div>
           </div>

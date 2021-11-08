@@ -22,7 +22,14 @@
     padding-left: 0.7rem;
     font-size: 1.2rem;
     border-radius: 0 0.5rem 0.5rem 0;
+
+    transition: all 0.2s ease;
+    
+    &:hover {
+      filter: brightness(0.97);
+    }
   }
+  
 }
 
 // Invalid classes
