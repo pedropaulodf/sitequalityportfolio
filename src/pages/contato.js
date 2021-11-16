@@ -1,9 +1,17 @@
 import Head from "next/head";
+import { useForm } from "react-hook-form";
 import { Footer } from "../components/Footer";
 
 import styles from "../styles/Contato.module.scss";
 
 export default function Contato() {
+
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (formData) => {
+    alert(JSON.stringify(formData));
+  }
+
   return (
     <>
       <Head>
@@ -20,6 +28,25 @@ export default function Contato() {
           <div className={styles.content}>
             <div className={styles.form}>
               <h3>Enviar mensagem</h3>
+
+                {/* UTILIZAR O YUP PARA VALIDAÇÃO https://react-hook-form.com/get-started/#SchemaValidation */}
+
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input type="text" {...register("assunto",{ required: true })}/>
+                <input type="text" {...register("nome")}/>
+                <input type="email" {...register("email",{ required: true })}/>
+                <input type="text" {...register("pais")}/>
+                <input type="text" {...register("cidade")}/>
+                <select name="" id="" {...register("estado",{ required: true })}>
+                  <option value="" disabled selected>Estado:</option>
+                  <option value="mg" >MG:</option>
+                  <option value="df" >DF:</option>
+                </select>
+                <textarea {...register("mensagem")} ></textarea>
+                <button type="submit">Enviar contato</button>
+              </form>
+
+
             </div>
             <div className={styles.contact}>
               <h3>Endereço</h3>
