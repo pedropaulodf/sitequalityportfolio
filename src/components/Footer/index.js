@@ -12,7 +12,7 @@ export function Footer() {
         </Link>
       </div>
       <div className={styles.bgRights}>
-        <p>© 2021 Quality Systems LTDA • Todos os direitos reservados.</p>
+        <p>© {new Date().getFullYear()} Quality Systems LTDA • Todos os direitos reservados.</p>
       </div>
     </footer>
   );
