@@ -44,7 +44,7 @@ export default function Contato() {
                     <Input
                       {...field}
                       type="text"
-                      placeholder="Assunto:"
+                      label="Assunto:"
                       error={errors.assunto}
                     />
                   )}
@@ -57,7 +57,7 @@ export default function Contato() {
                     <Input
                       {...field}
                       type="text"
-                      placeholder="Nome:"
+                      label="Nome:"
                       error={errors.nome}
                     />
                   )}
@@ -66,11 +66,12 @@ export default function Contato() {
                   name="pais"
                   control={control}
                   rules={{ required: true }}
+                  defaultValue="Brasil"
                   render={({ field }) => (
                     <Input
                       {...field}
                       type="text"
-                      placeholder="País:"
+                      label="País:"
                       error={errors.pais}
                     />
                   )}
@@ -83,7 +84,7 @@ export default function Contato() {
                     <Input
                       {...field}
                       type="text"
-                      placeholder="Estado:"
+                      label="Estado:"
                       error={errors.estado}
                     />
                   )}
@@ -96,7 +97,7 @@ export default function Contato() {
                     <Input
                       {...field}
                       type="text"
-                      placeholder="Cidade:"
+                      label="Cidade:"
                       error={errors.cidade}
                     />
                   )}
@@ -109,7 +110,7 @@ export default function Contato() {
                     <Input
                       {...field}
                       type="text"
-                      placeholder="E-mail:"
+                      label="E-mail:"
                       error={errors.email}
                     />
                   )}
@@ -122,7 +123,7 @@ export default function Contato() {
                     <Input
                       {...field}
                       type="tel"
-                      placeholder="Telefone:"
+                      label="Telefone:"
                       error={errors.telefone}
                     />
                   )}
@@ -135,7 +136,7 @@ export default function Contato() {
                     <Input
                       {...field}
                       type="textarea"
-                      placeholder="Mensagem:"
+                      label="Mensagem:"
                       error={errors.mensagem}
                     />
                   )}

@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className={styles.container}>
       <div className={styles.wrapper}>
-        <img src="/images/logo.png" alt="Logo Quality Systems" />
+      <Link href="/" ><a><img src="/images/logo.png" alt="Logo Quality Systems" /></a></Link>
         <nav>
           <Link href="/" ><a className={router.pathname === '/' ? styles.active : ''}>Início</a></Link>
           <Link href="/sobre" ><a className={router.pathname === '/sobre' ? styles.active : ''}>Sobre a Quality</a></Link>
