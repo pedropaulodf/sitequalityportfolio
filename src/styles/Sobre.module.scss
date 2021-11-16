@@ -86,7 +86,6 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 1rem;
-
         padding-top: 1.5rem;
 
         img {
@@ -96,6 +95,7 @@
           border: 1px solid #e5e5e5;
           border-radius: 0.5rem;
           object-fit: scale-down;
+          background-color: #ffffff;
         }
       }
     }
