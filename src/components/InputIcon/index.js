@@ -11,6 +11,7 @@ export function InputIcon({iconComponent, type, ...rest }) {
         {iconComponent}
       </div>
       <input
+        type={type}
         value={value}
         onChange={(e) => setValue(e.target.value)}
         // className={`${styles.input} ${styles.invalid}`}

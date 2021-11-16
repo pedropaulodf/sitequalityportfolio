@@ -16,25 +16,51 @@
     }
 
     .content {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
       gap: 4rem;
 
       .form {
+        width: 100%;
         h3 {
           font-size: 1.4rem;
           color: var(--blue-500);
-          margin-bottom: 0.2rem;
+          margin-bottom: 0.8rem;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          button {
+            background: var(--blue-500);
+            color: var(--white);
+            padding: 1rem 1rem 1rem 1rem;
+            font-size: 1.4rem;
+            border-radius: 0.5rem;
+
+            &:hover {
+              filter: brightness(1.1);
+            }
+            
+            &:active {
+              transform: scale(0.97);
+            }
+          }
         }
       }
 
       .contact {
-        width: fit-content;
+        width: 100%;
+        height: fit-content;
         border: 1px solid #d8d8d8;
         box-shadow: 8px 9px 11px 0px #00000008;
         border-radius: 0.8rem;
         padding: 1.8rem 1.3rem;
         border-top: 10px solid var(--blue-500);
+
+        margin-top: 2.5rem;
 
         background-color: #ffffff90;
 
@@ -70,14 +96,8 @@
   .container {
     .wrapper {
       .content {
-        flex-direction: column;
-
-        .contact {
-          width: 100%;
-        }
+        grid-template-columns: 1fr;
       }
     }
   }
-}
-@media (max-width: 340px) {
 }

@@ -1,0 +1,55 @@
+.container {
+
+  display: flex;
+
+  .input{
+    width: 100%;
+    color: #3E7CC5;
+    background-color: #EEF3FA;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border-left: 10px solid var(--blue-500);
+
+    transition: all 0.2s ease;
+    
+    &:hover {
+      filter: brightness(0.97);
+    }
+  }
+
+  textarea {
+    width: 100%;
+
+    resize: none;
+    overflow: hidden;
+    min-height: 120px;
+
+    color: #3E7CC5;
+    background-color: #EEF3FA;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border-left: 10px solid var(--blue-500);
+
+    transition: all 0.2s ease;
+    
+    &:hover {
+      filter: brightness(0.97);
+    }
+    
+  }
+  
+}
+
+// Invalid classes
+.invalidIcon {
+  background-color: #ffc1c1 !important;
+  color: #e96666 !important;
+}
+
+.invalid {
+  background-color: #ffd9d9 !important;
+}

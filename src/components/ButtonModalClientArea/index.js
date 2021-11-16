@@ -25,7 +25,7 @@ const ButtonModalClientArea = () => {
           <h6>Área do Cliente</h6>
           <div className={styles.inputBox}>
             <InputIcon type="text" placeholder="Código do cliente:" iconComponent={<FiUser />} required />
-            <InputIcon type="text" placeholder="Senha:" iconComponent={<FiLock />} required />
+            <InputIcon type="password" placeholder="Senha:" iconComponent={<FiLock />} required />
             <button type="submit" className={styles.submitButtom}>Efetuar Login</button>
           </div>
         </div>
