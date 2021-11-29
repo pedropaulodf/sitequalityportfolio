@@ -16,14 +16,73 @@
     }
 
     .content {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 4rem;
+      // display: grid;
+      // grid-template-columns: 1.5fr 1fr;
+      // gap: 4rem;
 
+      button {
+        padding: 10px 20px;
+        & + button {
+          margin-left: 10px;
+        }
+      }
 
+      .box {
+      }
+
+      .box1 {
+      }
+      .box2 {
+      }
+      .box3 {
+      }
     }
   }
 }
+@media (max-width: 720px) {
+}
+@media (max-width: 340px) {
+}
 
-@media (max-width: 720px) {}
-@media (max-width: 340px) {}
+
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}

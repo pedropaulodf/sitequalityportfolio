@@ -16,6 +16,30 @@ export default function Contato() {
     alert(JSON.stringify(formData));
   };
 
+  const beforeMaskedStateChange = (states) => {
+    console.log(states);
+    let { value } = states.currentState;
+
+    const newValue = value.replace(/[^0-9]/g, "");
+    if (newValue.length < 10) {
+      return states.nextState;
+    }
+
+    if (newValue.length === 10) {
+      value = newValue.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
+    } else if (newValue.length > 10) {
+      value = newValue.replace(/^(\d{2})(\d{5})(\d{4})(\d*)$/, "($1) $2-$3");
+    }
+
+    return {
+      value: value,
+      selection: {
+        start: value.length,
+        end: value.length,
+      },
+    };
+  };
+
   return (
     <>
       <Head>
@@ -105,7 +129,10 @@ export default function Contato() {
                 <Controller
                   name="email"
                   control={control}
-                  rules={{ required: true }}
+                  rules={{
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  }}
                   render={({ field }) => (
                     <Input
                       {...field}
@@ -118,6 +145,7 @@ export default function Contato() {
                 <Controller
                   name="telefone"
                   control={control}
+                  defaultValue=""
                   rules={{ required: true }}
                   render={({ field }) => (
                     <Input
@@ -141,9 +169,7 @@ export default function Contato() {
                     />
                   )}
                 />
-
                 <button type="submit">Enviar contato</button>
-                
               </form>
             </div>
             <div className={styles.contact}>

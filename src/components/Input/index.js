@@ -1,7 +1,8 @@
-import { useState } from "react";
+import PhoneInput from "react-phone-input-2";
 import styles from "./styles.module.scss";
 
 export function Input({ type, label = "", ...rest }) {
+
   return (
     <div className={styles.container}>
       {type === "textarea" ? (
@@ -11,6 +12,19 @@ export function Input({ type, label = "", ...rest }) {
             className={`${styles.input} ${rest.error && styles.invalid}`}
             {...rest}
           ></textarea>
+        </>
+      ) : type === "tel" ? (
+        <>
+          <label>{label}</label>
+          <PhoneInput
+            country={"br"}
+            value={rest.value}
+            onChange={rest.onChange}
+            placeholder="55 34"
+            specialLabel=""
+            inputClass={`${styles.input} ${rest.error && styles.invalid}`}
+            inputStyle={{paddingLeft: 60}}
+          />
         </>
       ) : (
         <>
