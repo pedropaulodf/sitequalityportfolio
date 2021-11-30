@@ -16,57 +16,177 @@
     }
 
     .content {
-      // display: grid;
-      // grid-template-columns: 1.5fr 1fr;
-      // gap: 4rem;
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      gap: 4rem;
 
-      button {
-        padding: 10px 20px;
-        & + button {
-          margin-left: 10px;
+      .menuCategories {
+        border: 1px solid #00000010;
+        border-radius: 1rem;
+        padding: 0.4rem 0.4rem 1.5rem 0.4rem;
+        min-width: 300px;
+
+        .boxTopTitles {
+          background-color: var(--blue-400);
+          border-radius: 0.8rem;
+          padding: 1.2rem;
+          margin-bottom: 1.5rem;
+
+          h3 {
+            color: var(--white);
+            font-size: 2.1rem;
+          }
+
+          p {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
+          }
+        }
+
+        ul {
+          li {
+            list-style-type: none;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            color: #00000050;
+            cursor: pointer;
+            border-radius: 0.3rem;
+            transition: all 0.2s ease;
+
+            & + li {
+              margin-top: 1px;
+            }
+
+            &:hover {
+              color: #ffffff;
+              background-color: var(--blue-350);
+              border-left: 10px solid var(--blue-500);
+            }
+          }
+          .categoryActive {
+            color: #ffffff;
+            background-color: var(--blue-350);
+            border-left: 10px solid var(--blue-500);
+
+            &:hover {
+              background-color: var(--blue-350);
+            }
+          }
         }
       }
 
-      .box {
-      }
+      .boxProducts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
 
-      .box1 {
+        .boxProduct {
+          border: 1px solid #00000010;
+          border-radius: 0.5rem;
+          padding: 0.4rem 0.4rem 1.5rem 0.4rem;
+
+          display: flex;
+          flex-direction: column;
+
+          &:hover {
+            border: 1px solid var(--blue-400);
+          }
+
+          .boxProductName {
+            background-color: var(--blue-50);
+            border-radius: 0.4rem;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+
+            p {
+              color: var(--blue-500);
+              font-size: 1.5rem;
+              text-align: center;
+            }
+          }
+          img {
+            width: fit-content;
+            align-self: center;
+          }
+        }
       }
-      .box2 {
+    }
+  }
+}
+@media (max-width: 1220px) {
+  .container {
+    .wrapper {
+      .content {
+        .boxProducts {
+          grid-template-columns: 1fr 1fr;
+        }
       }
-      .box3 {
+    }
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    .wrapper {
+      .content {
+        gap: 1.5rem;
+        .boxProducts {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }
 }
 @media (max-width: 720px) {
+  .container {
+    .wrapper {
+      .content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        .boxProducts {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
 }
-@media (max-width: 340px) {
+@media (max-width: 500px) {
+  .container {
+    .wrapper {
+      .content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        .menuCategories {
+          min-width: 100%;
+        }
+        .boxProducts {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
 }
-
-
 
 /* Animation */
-
 @keyframes fadeInUp {
   from {
-      transform: translate3d(0,40px,0)
+    transform: translate3d(0, 40px, 0);
   }
-
   to {
-      transform: translate3d(0,0,0);
-      opacity: 1
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeInUp {
   from {
-      transform: translate3d(0,40px,0)
+    transform: translate3d(0, 40px, 0);
   }
-
   to {
-      transform: translate3d(0,0,0);
-      opacity: 1
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -74,11 +194,11 @@
   animation-duration: 1s;
   animation-fill-mode: both;
   -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: both
+  -webkit-animation-fill-mode: both;
 }
 
 .animatedFadeInUp {
-  opacity: 0
+  opacity: 0;
 }
 
 .fadeInUp {
