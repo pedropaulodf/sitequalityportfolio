@@ -32,10 +32,26 @@
         height: 100%;
         padding: 3rem 1rem;
 
+        transition: all 0.3s ease;
+
         & + a {
           margin-left: 1rem;
         }
         
+        &:hover {
+          background-color: #0d3b7217;
+        }
+
+        // &:hover::after {
+        //   content: "";
+        //   height: 5px;
+        //   width: 100%;
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 0;
+        //   background-color: var(--blue-500);
+        // }
+
         &.active {  
           background-color: #0d3b7217;
         }
