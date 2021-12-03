@@ -18,6 +18,7 @@
     "react-icons": "^4.3.1",
     "react-phone-input-2": "^2.14.0",
     "react-slideshow-image": "^3.6.0",
+    "react-tabs": "^3.2.3",
     "rerousel": "^0.1.9",
     "sass": "^1.43.4",
     "styled-components": "^5.3.3"
