@@ -4,6 +4,17 @@ import { Footer } from "../components/Footer";
 import styles from "../styles/Sobre.module.scss";
 
 export default function Sobre() {
+  
+  // array com as logos das tecnologias
+  const TECH_LOGOS = [
+    { name: "Logo SQL Server", imagemPath: "/images/techLogos/logo-sqlserver.png" },
+    { name: "Logo ASP.net", imagemPath: "/images/techLogos/logo-aspnet.png" },
+    { name: "Logo Dot.net", imagemPath: "/images/techLogos/logo-dotnet.png" },
+    { name: "Logo C#", imagemPath: "/images/techLogos/logo-csharp.png" },
+    { name: "Logo ReactJS", imagemPath: "/images/techLogos/logo-react.png" },
+    { name: "Logo React Native", imagemPath: "/images/techLogos/logo-rn.png" },
+  ];
+
   return (
     <>
       <Head>
@@ -50,21 +61,9 @@ export default function Sobre() {
           <div className={styles.technologies}>
             <h3>Tecnologias</h3>
             <div className={styles.techLogoBox}>
-              <img src="/images/techLogos/logo-csharp.png" alt="Logo C#" />
-              <img
-                src="/images/techLogos/logo-sqlserver.png"
-                alt="Logo SQL Server"
-              />
-              <img src="/images/techLogos/logo-aspnet.png" alt="Logo ASP.net" />
-              <img src="/images/techLogos/logo-dotnet.png" alt="Logo Dot.net" />
-              <img src="/images/techLogos/logo-react.png" alt="Logo ReactJS" />
-              <img
-                src="/images/techLogos/logo-rn.png"
-                alt="Logo React Native"
-              />
-              <img src="/images/techLogos/logo-html.png" alt="Logo HTML" />
-              <img src="/images/techLogos/logo-css.png" alt="Logo CSS" />
-              <img src="/images/techLogos/logo-php.png" alt="Logo PHP" />
+              {TECH_LOGOS.map((tech, index) => (
+                <img key={index} src={tech.imagemPath} alt={tech.name} />
+              ))}
             </div>
           </div>
         </section>

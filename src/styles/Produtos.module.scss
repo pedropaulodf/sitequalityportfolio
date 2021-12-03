@@ -25,6 +25,7 @@
         border-radius: 1rem;
         padding: 0.4rem 0.4rem 1.5rem 0.4rem;
         min-width: 300px;
+        height: fit-content;
 
         .boxTopTitles {
           background-color: var(--blue-400);
@@ -81,36 +82,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
-
-        .boxProduct {
-          border: 1px solid #00000010;
-          border-radius: 0.5rem;
-          padding: 0.4rem 0.4rem 1.5rem 0.4rem;
-
-          display: flex;
-          flex-direction: column;
-
-          &:hover {
-            border: 1px solid var(--blue-400);
-          }
-
-          .boxProductName {
-            background-color: var(--blue-50);
-            border-radius: 0.4rem;
-            padding: 1.2rem;
-            margin-bottom: 1.5rem;
-
-            p {
-              color: var(--blue-500);
-              font-size: 1.5rem;
-              text-align: center;
-            }
-          }
-          img {
-            width: fit-content;
-            align-self: center;
-          }
-        }
       }
     }
   }
@@ -167,42 +138,4 @@
       }
     }
   }
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 40px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 40px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-}
-
-.animatedFadeInUp {
-  opacity: 0;
-}
-
-.fadeInUp {
-  opacity: 0;
-  animation-name: fadeInUp;
-  -webkit-animation-name: fadeInUp;
 }

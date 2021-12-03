@@ -5,17 +5,14 @@ import { AccordionRA } from "../components/AccordionRA";
 import { Footer } from "../components/Footer";
 import { ButtonOutlined } from "../components/ButtonOutlined";
 import { ButtonGreen } from "../components/ButtonGreen";
-import { ButtonCircleArrow } from "../components/ButtonCircleArrow";
 import { Carousel } from "../components/Carousel";
 import SlideShow from "../components/SlideShow";
 import {
-  FiArrowLeft,
-  FiArrowRight,
   FiSliders,
   FiThumbsUp,
 } from "react-icons/fi";
 
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/Index.module.scss";
 
 export default function Home() {
   return (
@@ -35,10 +32,9 @@ export default function Home() {
             <div className={styles.info}>
               <h1>Quality Automação de Clubes</h1>
               <p>
-                <strong>Desde 1990</strong> oferecendo{" "}
-                <strong>soluções inovadoras</strong> para gestão e automação de{" "}
-                <strong>clubes, agremiações, sindicatos</strong> e{" "}
-                <strong>academias</strong>.
+                <strong>Desde 1990</strong> oferecendo <strong>soluções inovadoras</strong><br/>
+                para gestão e automação de <strong>clubes,<br/>agremiações, sindicatos</strong> e <strong>academias</strong><br/>para mais de <strong>200 clientes</strong><br/>
+                em todo o Brasil.
               </p>
               <a href="#saibamais">
                 <button type="button">Clique e saiba mais</button>
@@ -56,12 +52,10 @@ export default function Home() {
         {/* CLIENTES QUALITY */}
         <section className={styles.wrapperCustomers}>
           <div className={styles.content}>
-            <h3>Clientes que contam a Quality!</h3>
+            <h3>Clientes que confiam na Quality!</h3>
             <div className={styles.sliderWrapper}>
               <div className={styles.slider}>
-                <Carousel interval={2000}/>
-                {/* <ButtonCircleArrow left bgColor="#656565" handleClick={() => console.log('click left')} />
-                <ButtonCircleArrow bgColor="#656565" onclick={() => console.log('click right')} /> */}
+                <Carousel interval={2500}/>
               </div>
             </div>
           </div>
