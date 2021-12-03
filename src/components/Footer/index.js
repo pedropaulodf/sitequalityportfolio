@@ -12,7 +12,13 @@ export function Footer() {
         </Link>
       </div>
       <div className={styles.bgRights}>
-        <p>© {new Date().getFullYear()} Quality Systems LTDA • Todos os direitos reservados.</p>
+        <p>
+          © {new Date().getFullYear()} Quality Systems LTDA • Todos os direitos
+          reservados • 
+          <Link href="/novo/privacidade.html">
+            <a> Política de privacidade</a>
+          </Link>
+        </p>
       </div>
     </footer>
   );

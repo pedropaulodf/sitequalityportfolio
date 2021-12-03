@@ -40,7 +40,6 @@ export default function Contato() {
     };
   };
 
-
   // https://formsubmit.co/documentation
 
   return (
