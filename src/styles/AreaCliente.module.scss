@@ -60,6 +60,10 @@
           &:hover {
             filter: brightness(1.05);
           }
+
+          &:active {
+            transform: translateX(3px);
+          }
         }
       }
 

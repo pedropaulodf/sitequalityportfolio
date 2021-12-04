@@ -1,8 +1,16 @@
-.iconButton {
-  width: 20px;
-  height: 20px;
-  margin-right: 0.5rem;
-  color: #ffffff;
+.openButtom {
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .iconButton {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    color: #ffffff;
+  }
 }
 
 .modal {
@@ -40,7 +48,6 @@
     &:active {
       transform: scale(0.97);
     }
-
   }
 
   .closeButton{

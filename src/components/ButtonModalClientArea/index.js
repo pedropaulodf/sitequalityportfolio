@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import {ReactCircleModal} from 'react-circle-modal';
 import { FiUser, FiX, FiLock } from "react-icons/fi";
@@ -6,11 +7,13 @@ import styles from "./styles.module.scss";
 
 const ButtonModalClientArea = () => {
   
+  const router = useRouter();
+
   return (
     <ReactCircleModal
       backgroundColor="#3e7cc5f2"
       toogleComponent={onClick => (
-        <button type="button" onClick={onClick}>
+        <button type="button" className={styles.openButtom} onClick={onClick} disabled={router.pathname === '/areacliente' ? true : false }>
           <FiUser className={styles.iconButton} />
           Área do Cliente
         </button>

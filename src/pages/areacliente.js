@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 
 // Objeto com os dados do cliente
 const CLIENT_DATA = {
+  nome: "Caiçaras Country Clube",
   licenca: {
     chave: "AAAA-BBBB-CCCC-DDDD-X",
     dataVencimentoChave: "2022-02-15T00:00:00",
@@ -65,7 +66,7 @@ export default function Sobre() {
           <div className={styles.content}>
             <div className={styles.topSection}>
               <h3>
-                Bem-vindo, <span>Caiçaras Country Clube</span>!
+                Bem-vindo, <span>{CLIENT_DATA?.nome}</span>!
               </h3>
               <button type="button">
                 <div>

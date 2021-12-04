@@ -57,7 +57,7 @@ export default function Contato() {
           <h2>Contato</h2>
           <div className={styles.content}>
             <div className={styles.form}>
-              <h3>Enviar mensagem:</h3>
+              <h3>Entre em contato conosco:</h3>
 
               {/* UTILIZAR O YUP PARA VALIDAÇÃO https://react-hook-form.com/get-started/#SchemaValidation */}
 
