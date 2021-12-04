@@ -1,4 +1,4 @@
-import { toast } from "react-toastify";
+import { toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const copyText = (text) => {
@@ -13,5 +13,7 @@ export const copyText = (text) => {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
+    transition: Slide,
+    theme: "colored",
   });
 };

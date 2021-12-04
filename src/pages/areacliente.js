@@ -142,9 +142,7 @@ export default function Sobre() {
                               ? `A chave expira em ${diasRestantesValidadeChave} dias!`
                               : diasRestantesValidadeChave === 0
                               ? `A chave expira hoje!`
-                              : `A chave expirou a ${
-                                  diasRestantesValidadeChave * -1
-                                } dias!`}
+                              : `A chave expirou a ${diasRestantesValidadeChave * -1} dias!`}
                           </div>
                         </div>
                       </div>
@@ -186,7 +184,7 @@ export default function Sobre() {
       </main>
 
       <Footer />
-      <ToastContainer />
+      <ToastContainer/>
     </>
   );
 }
