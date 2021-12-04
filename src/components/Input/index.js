@@ -1,7 +1,7 @@
 import PhoneInput from "react-phone-input-2";
 import styles from "./styles.module.scss";
 
-export function Input({ type, label = "", ...rest }) {
+export function Input({ type = "text", label = "", ...rest }) {
 
   return (
     <div className={styles.container}>

@@ -17,7 +17,7 @@ export default function Contato() {
   };
 
   const beforeMaskedStateChange = (states) => {
-    console.log(states);
+    
     let { value } = states.currentState;
 
     const newValue = value.replace(/[^0-9]/g, "");

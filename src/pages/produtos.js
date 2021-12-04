@@ -175,7 +175,7 @@ export default function Produtos() {
                   <li
                     key={index}
                     onClick={() => handleClickMenuCategories(menu.objName, index)}
-                    className={menu.active && styles.categoryActive}
+                    className={`${menu.active && styles.categoryActive}`}
                   >
                     {menu.title}
                   </li>

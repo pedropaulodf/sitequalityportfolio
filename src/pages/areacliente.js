@@ -1,12 +1,51 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { FiLogOut } from "react-icons/fi";
+
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
+import { ToastContainer } from "react-toastify";
+
+import { copyText } from "../utils/utils";
 import styles from "../styles/AreaCliente.module.scss";
+import { differenceInCalendarDays, format, parseISO } from "date-fns";
+import { useEffect, useState } from "react";
+
+// Objeto com os dados do cliente
+const CLIENT_DATA = {
+  licenca: {
+    chave: "AAAA-BBBB-CCCC-DDDD-X",
+    dataVencimentoChave: "2022-02-15T00:00:00",
+  },
+  arquivos: [],
+  clienteDados: [
+    { label: "Razão Social", value: "Caiçaras Country Clube" },
+    { label: "Endereço", value: "R. Major Gote, 1199" },
+    { label: "Bairro", value: "Alto Caiçaras" },
+    { label: "Cidade - UF", value: "Patos de Minas - MG" },
+    { label: "CEP", value: "38702-054" },
+    { label: "Telefone", value: "(34) 3818-7400" },
+    {
+      label: "E-mail de contato",
+      value: "financeirocaicaras@clubecaicaras.com.br",
+    },
+  ],
+};
 
 export default function Sobre() {
+  const [diasRestantesValidadeChave, setDiasRestantesValidadeChave] = useState(0);
+
+  useEffect(() => {
+    // Seta os dias restantes da validade da chave
+    setDiasRestantesValidadeChave(
+      differenceInCalendarDays(
+        parseISO(CLIENT_DATA?.licenca?.dataVencimentoChave),
+        new Date()
+      )
+    );
+  }, []);
+
   return (
     <>
       <Head>
@@ -65,15 +104,48 @@ export default function Sobre() {
                       <div className={styles.boxInputButtonCopy}>
                         <label>Sua chave de licença:</label>
                         <div>
-                          <textarea>AAAA-BBBB-CCCC-DDDD-X</textarea>
-                          <button type="button">Copiar Chave</button>
+                          <textarea
+                            value={CLIENT_DATA?.licenca?.chave}
+                            readOnly
+                          ></textarea>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              copyText(CLIENT_DATA?.licenca?.chave)
+                            }
+                          >
+                            Copiar Chave
+                          </button>
                         </div>
                       </div>
                       <div className={styles.boxInput}>
                         <label>Data de Vencimento da Chave:</label>
                         <div>
-                          <input type="text" value="03/12/2021" />
-                          <div className={styles.expirationMessage}>A chave expira em 53 dias</div>
+                          <input
+                            type="text"
+                            value={format(
+                              parseISO(
+                                CLIENT_DATA?.licenca?.dataVencimentoChave
+                              ),
+                              "dd/MM/yyyy"
+                            )}
+                            readOnly
+                          />
+                          <div
+                            className={`${
+                              diasRestantesValidadeChave <= 10
+                                ? styles.expirationMessageRed
+                                : styles.expirationMessage
+                            }`}
+                          >
+                            {diasRestantesValidadeChave > 0
+                              ? `A chave expira em ${diasRestantesValidadeChave} dias!`
+                              : diasRestantesValidadeChave === 0
+                              ? `A chave expira hoje!`
+                              : `A chave expirou a ${
+                                  diasRestantesValidadeChave * -1
+                                } dias!`}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -87,63 +159,23 @@ export default function Sobre() {
                 <TabPanel className={styles.tabPanel}>
                   <div className={styles.boxTabContainer}>
                     <div className={styles.tabContent}>
-
-                      <div className={styles.boxInputButtonCopyTabData}>
-                        <label>Razão Social:</label>
-                        <div>
-                          <textarea>Caiçaras Country Clube</textarea>
-                          <button type="button">Copiar</button>
+                      {CLIENT_DATA.clienteDados.map((dado, index) => (
+                        <div
+                          key={index}
+                          className={styles.boxInputButtonCopyTabData}
+                        >
+                          <label>{dado.label}:</label>
+                          <div>
+                            <textarea value={dado.value} readOnly></textarea>
+                            <button
+                              type="button"
+                              onClick={() => copyText(dado.value)}
+                            >
+                              Copiar
+                            </button>
+                          </div>
                         </div>
-                      </div>
-
-                      <div className={styles.boxInputButtonCopyTabData}>
-                        <label>Endereço:</label>
-                        <div>
-                          <textarea>R. Major Gote, 1199</textarea>
-                          <button type="button">Copiar</button>
-                        </div>
-                      </div>
-
-                      <div className={styles.boxInputButtonCopyTabData}>
-                        <label>Bairro:</label>
-                        <div>
-                          <textarea>Alto Caiçaras</textarea>
-                          <button type="button">Copiar</button>
-                        </div>
-                      </div>
-
-                      <div className={styles.boxInputButtonCopyTabData}>
-                        <label>Cidade - UF:</label>
-                        <div>
-                          <textarea>Patos De Minas - MG</textarea>
-                          <button type="button">Copiar</button>
-                        </div>
-                      </div>
-
-                      <div className={styles.boxInputButtonCopyTabData}>
-                        <label>CEP:</label>
-                        <div>
-                          <textarea>38702-054</textarea>
-                          <button type="button">Copiar</button>
-                        </div>
-                      </div>
-
-                      <div className={styles.boxInputButtonCopyTabData}>
-                        <label>Telefone:</label>
-                        <div>
-                          <textarea>(34) 3818-7400</textarea>
-                          <button type="button">Copiar</button>
-                        </div>
-                      </div>
-
-                      <div className={styles.boxInputButtonCopyTabData}>
-                        <label>E-mail de contato:</label>
-                        <div>
-                          <textarea>financeirocaicaras@clubecaicaras.com.br</textarea>
-                          <button type="button">Copiar</button>
-                        </div>
-                      </div>
-
+                      ))}
                     </div>
                   </div>
                 </TabPanel>
@@ -154,6 +186,7 @@ export default function Sobre() {
       </main>
 
       <Footer />
+      <ToastContainer />
     </>
   );
 }

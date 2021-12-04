@@ -145,6 +145,18 @@
           max-width: 500px;
           text-align: center;
         }
+
+        .expirationMessageRed {
+          background-color: #fcd2d2;
+          color: #a53131;
+          padding: 0.5rem 0.8rem;
+          border-radius: 0 0 0.5rem 0.5rem;
+          font-size: 0.9rem;
+          width: 100%;
+          max-width: 500px;
+          text-align: center;
+          font-weight: 700;
+        }
       }
 
       .boxInputButtonCopyTabData {
