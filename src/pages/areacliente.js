@@ -35,7 +35,8 @@ const CLIENT_DATA = {
 };
 
 export default function Sobre() {
-  const [diasRestantesValidadeChave, setDiasRestantesValidadeChave] = useState(0);
+  const [diasRestantesValidadeChave, setDiasRestantesValidadeChave] =
+    useState(0);
 
   useEffect(() => {
     // Seta os dias restantes da validade da chave
@@ -143,7 +144,9 @@ export default function Sobre() {
                               ? `A chave expira em ${diasRestantesValidadeChave} dias!`
                               : diasRestantesValidadeChave === 0
                               ? `A chave expira hoje!`
-                              : `A chave expirou a ${diasRestantesValidadeChave * -1} dias!`}
+                              : `A chave expirou a ${
+                                  diasRestantesValidadeChave * -1
+                                } dias!`}
                           </div>
                         </div>
                       </div>
@@ -151,9 +154,58 @@ export default function Sobre() {
                   </div>
                 </TabPanel>
 
+
+
+
+
                 <TabPanel className={styles.tabPanel}>
-                  <div className={styles.boxTabContainer}>Any content 2</div>
+                  <div className={styles.boxTabContainer}>
+                    <table className={styles.table}>
+                      <thead>
+                        <tr>
+                          <th scope="col" style={{width: "40%"}}>Nome do Arquivo</th>
+                          <th scope="col">Tamanho</th>
+                          <th scope="col">Tipo de Arquivo</th>
+                          <th scope="col">Última Modificação</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-label="Nome do arquivo">Mysql-connector-odbc-5.1.5-win32</td>
+                          <td data-label="Tamanho">4.1 MB</td>
+                          <td data-label="Tipo de Arquivo">.msi</td>
+                          <td data-label="Última Modificação">04/01/2016 20:43</td>
+                          <td data-label=""><button>baixar</button></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Nome do arquivo">FS USB Driver Ver4015 Setup</td>
+                          <td data-label="Tamanho">198.0 KB</td>
+                          <td data-label="Tipo de Arquivo">.msi</td>
+                          <td data-label="Última Modificação">04/01/2016 20:43</td>
+                          <td data-label=""><button>baixar</button></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Nome do arquivo">Ethernet Discoverer</td>
+                          <td data-label="Tamanho">4.1 MB</td>
+                          <td data-label="Tipo de Arquivo">.msi</td>
+                          <td data-label="Última Modificação">04/01/2016 20:43</td>
+                          <td data-label=""><button>baixar</button></td>
+                        </tr>
+                        <tr>
+                          <td data-label="Nome do arquivo">Hamachi</td>
+                          <td data-label="Tamanho">4.1 MB</td>
+                          <td data-label="Tipo de Arquivo">.msi</td>
+                          <td data-label="Última Modificação">04/01/2016 20:43</td>
+                          <td data-label=""><button>baixar</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </TabPanel>
+
+
+
 
                 <TabPanel className={styles.tabPanel}>
                   <div className={styles.boxTabContainer}>
@@ -185,7 +237,7 @@ export default function Sobre() {
       </main>
 
       <Footer />
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 }

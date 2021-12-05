@@ -201,8 +201,9 @@ a {
 }
 
 /* Styles SlideShow */
-.react-slideshow-wrapper.slide {
+.react-slideshow-wrapper.slide,.react-slideshow-fade-wrapper  {
   border-radius: 0.6rem;
+  z-index: 0;
 }
 
 /* ESTILOS DO PHONEINPUT */
