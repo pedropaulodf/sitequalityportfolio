@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer";
+import HeadCustom from "../components/HeadCustom";
 
 import styles from "../styles/Sobre.module.scss";
 
@@ -17,9 +18,7 @@ export default function Sobre() {
 
   return (
     <>
-      <Head>
-        <title>Sobre | Quality Systems</title>
-      </Head>
+      <HeadCustom pageName="Sobre" />
 
       <main className={styles.container}>
         <section className={styles.wrapper}>

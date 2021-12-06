@@ -13,13 +13,12 @@ import {
 } from "react-icons/fi";
 
 import styles from "../styles/Index.module.scss";
+import HeadCustom from "../components/HeadCustom";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Início | Quality Systems</title>
-      </Head>
+      <HeadCustom pageName="Início" />
 
       <main className={styles.container}>
         {/* BANNER */}

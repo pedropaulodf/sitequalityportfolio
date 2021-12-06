@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { Footer } from "../components/Footer";
+import HeadCustom from "../components/HeadCustom";
 import { ProductItem } from "../components/ProductItem";
 
 import styles from "../styles/Produtos.module.scss";
@@ -153,9 +154,7 @@ export default function Produtos() {
 
   return (
     <>
-      <Head>
-        <title>Produtos | Quality Systems</title>
-      </Head>
+      <HeadCustom pageName="Produtos" />
 
       <main className={styles.container}>
         <section className={styles.wrapper}>

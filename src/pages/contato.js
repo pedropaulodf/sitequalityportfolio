@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useForm, Controller } from "react-hook-form";
 import { Footer } from "../components/Footer";
+import HeadCustom from "../components/HeadCustom";
 import { Input } from "../components/Input";
 import styles from "../styles/Contato.module.scss";
 
@@ -44,9 +45,7 @@ export default function Contato() {
 
   return (
     <>
-      <Head>
-        <title>Contato | Quality Systems</title>
-      </Head>
+      <HeadCustom pageName="Contato" />
 
       <main className={styles.container}>
         <section className={styles.wrapper}>
