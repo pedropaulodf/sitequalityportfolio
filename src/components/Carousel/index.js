@@ -33,6 +33,7 @@ export const Carousel = (props) => {
               data-tooltip="Tooltip help here!"
               data-flow="top"
               className={styles.clientLogo}
+              alt={`Logo ${logo.name}`}
             />
           </span>
         ))}
