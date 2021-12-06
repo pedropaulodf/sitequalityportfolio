@@ -154,7 +154,7 @@ export default function Sobre() {
             <div className={styles.content}>
               <div className={styles.topSection}>
                 <h3>
-                  Bem-vindo, <span>{clientData?.nome}</span>!
+                  Bem-vindo, <span>{clientData?.nome}</span>! <span className={styles.emoji}>👋</span>
                 </h3>
                 <button type="button" onClick={() => handleClickButtonExit()}>
                   <div>
@@ -261,14 +261,14 @@ export default function Sobre() {
                               <td data-label="">
                                 <img src={arquivo.iconPath} />
                               </td>
-                              <td data-label="Nome do arquivo:">
+                              <td data-label="Arquivo:">
                                 {arquivo.nome}
                               </td>
                               <td data-label="Tamanho:">{arquivo.tamanho}</td>
                               <td data-label="Tipo de Arquivo:">
                                 {arquivo.tipo}
                               </td>
-                              <td data-label="Última Modificação:">
+                              <td data-label="Última Alteração:">
                                 {arquivo.ultimaModificacao}
                               </td>
                               <td data-label="">

@@ -17,6 +17,10 @@
   padding: 1rem;
 }
 
+.emoji {
+  font-weight: 100;
+}
+
 .container {
   width: 100%;
   padding: 0 2rem;
@@ -269,10 +273,30 @@
       height: auto !important;
     }
   }
+  .container {
+    .wrapper {
+      .content {
+        .topSection {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          margin-bottom: -1.5rem;
+
+          button {
+            align-self: flex-end;
+            font-size: 1rem;
+            padding-right: 1rem;
+            div {
+              padding: 0.5rem;
+              font-size: 1.1rem;
+              margin-right: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-
-
 
 .table {
   // border: 1px solid #ccc;
@@ -285,18 +309,18 @@
 
 .table caption {
   font-size: 1.5rem;
-  margin: .5rem 0 .75rem;
+  margin: 0.5rem 0 0.75rem;
 }
 
 .table tr {
   // background-color: #f8f8f8;
   border-bottom: 1px solid #efefef;
-  padding: .35rem;
+  padding: 0.35rem;
 }
 
 .table th,
 .table td {
-  padding: .625rem;
+  padding: 0.625rem;
   text-align: left;
   color: var(--gray-500);
 }
@@ -310,6 +334,12 @@
 }
 
 @media screen and (max-width: 730px) {
+  .tabPanel {
+    .boxTabContainer {
+      padding: 1rem;
+    }
+  }
+
   .table {
     border: 0;
   }
@@ -317,7 +347,7 @@
   .table caption {
     font-size: 1.3rem;
   }
-  
+
   .table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -328,20 +358,21 @@
     position: absolute;
     width: 1px;
   }
-  
+
   .table tr {
     border-bottom: 3px solid #ddd;
     display: block;
-    margin-bottom: .625rem;
+    margin-bottom: 0.625rem;
+    padding: 0;
   }
-  
+
   .table td {
     border-bottom: 1px solid #ddd;
     display: block;
     font-size: 1rem;
     text-align: right;
   }
-  
+
   .table td::before {
     /*
     * aria-label has no advantage, it won't be read inside a .table
@@ -349,10 +380,11 @@
     */
     content: attr(data-label);
     float: left;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
+    font-size: 0.9rem;
   }
-  
+
   .table td:last-child {
     border-bottom: 0;
   }
