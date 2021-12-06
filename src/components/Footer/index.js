@@ -13,10 +13,14 @@ export function Footer() {
       </div>
       <div className={styles.bgRights}>
         <p>
-          © {new Date().getFullYear()} Quality Systems LTDA • Todos os direitos
-          reservados • 
+          © Quality Systems LTDA • {new Date().getFullYear()} • Todos os direitos
+          reservados <br/> 
           <Link href="/novo/privacidade.html">
-            <a> Política de privacidade</a>
+            <a> Política de privacidade </a>
+          </Link>
+          • 
+          <Link href="https://pedropaulo.dev">
+            <a> Criado por: pedropaulo.dev</a>
           </Link>
         </p>
       </div>
