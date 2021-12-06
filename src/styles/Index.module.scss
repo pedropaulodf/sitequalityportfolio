@@ -64,21 +64,6 @@
           position: absolute;
           z-index: 0;
         }
-
-        // .slider {
-        //   background-color: #4b637e;
-
-        //   width: 80%;
-        //   height: 90%;
-        //   margin: 0 auto;
-        //   border-radius: 0.5rem;
-
-        //   display: flex;
-        //   justify-content: space-between;
-        //   align-items: center;
-
-        //   z-index: 1;
-        // }
       }
     }
   }
@@ -113,19 +98,7 @@
         align-items: center;
 
         .slider {
-          // background-color: #4b637e;
-
           width: 100%;
-          // height: 90%;
-          // min-height: 100px;
-          // margin: 0 auto;
-          // border-radius: 0.5rem;
-
-          // display: flex;
-          // justify-content: space-between;
-          // align-items: center;
-
-          // z-index: 1;
         }
       }
       // TEMPORÁRIO
@@ -233,6 +206,7 @@
       .banner {
         gap: 2rem 0rem;
         grid-template-columns: 1fr;
+        padding: 2rem 2rem;
 
         .sliderWrapper {
           .slider {

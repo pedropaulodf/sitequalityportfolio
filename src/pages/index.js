@@ -27,9 +27,7 @@ export default function Home() {
             <div className={styles.info}>
               <h1>Quality Automação de Clubes</h1>
               <p>
-                <strong>Desde 1990</strong> oferecendo <strong>soluções inovadoras</strong><br/>
-                para gestão e automação de <strong>clubes,<br/>agremiações, sindicatos</strong> e <strong>academias</strong><br/>para mais de <strong>200 clientes</strong><br/>
-                em todo o Brasil.
+                <strong>Desde 1990</strong> oferecendo <strong>soluções inovadoras</strong> para gestão e automação de <strong>clubes, agremiações, sindicatos</strong> e <strong>academias</strong> para mais de <strong>200 clientes</strong> em todo o Brasil.
               </p>
               <a href="#saibamais">
                 <button type="button">Clique e saiba mais</button>
