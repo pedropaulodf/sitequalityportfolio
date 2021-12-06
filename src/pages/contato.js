@@ -197,7 +197,7 @@ export default function Contato() {
           </div>
 
           <div className={styles.map}>
-            <img src="/images/map-placeholder.png" alt="Mapa temporário" />
+            <img src="/images/map-placeholder.webp" alt="Mapa temporário" />
           </div>
         </section>
       </main>

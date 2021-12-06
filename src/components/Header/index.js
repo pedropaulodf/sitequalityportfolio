@@ -50,7 +50,7 @@ export function Header() {
         <div className={styles.header__content__logo}>
           <Link href="/">
             <a>
-              <img src="/images/logo.png" alt="Logo Quality Systems" />
+              <img src="/images/logo.webp" alt="Logo Quality Systems" />
             </a>
           </Link>
         </div>

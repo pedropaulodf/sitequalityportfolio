@@ -110,7 +110,7 @@ export default function Home() {
             <h3>Conheça os Recursos</h3>
             <div className={styles.grid}>
               <div className={styles.imgResources}>
-                <img src="/images/recursos.png" alt="Recursos" />
+                <img src="/images/recursos.webp" alt="Recursos" />
                 <ButtonOutlined href="/produtos" text="Veja todos os produtos" />
               </div>
               <div>

@@ -7,7 +7,7 @@ export function Footer() {
       <div className={styles.bgLogo}>
         <Link href="/">
           <a className={styles.navLink}>
-            <img src="/images/logoWhite.png" alt="Logo Quality Systems" />
+            <img src="/images/logoWhite.webp" alt="Logo Quality Systems" />
           </a>
         </Link>
       </div>
