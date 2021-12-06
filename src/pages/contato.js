@@ -130,7 +130,7 @@ export default function Contato() {
                   render={({ field }) => (
                     <Input
                       {...field}
-                      type="text"
+                      type="email"
                       label="E-mail:"
                       error={errors.email}
                     />
