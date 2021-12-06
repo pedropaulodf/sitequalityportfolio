@@ -104,7 +104,7 @@ const ButtonModalClientArea = ({ handleCloseMenu }) => {
                 <Controller
                   name="codigo"
                   control={control}
-                  defaultValue=""
+                  defaultValue="teste"
                   rules={{ required: true }}
                   render={({ field }) => (
                     <InputIcon
@@ -120,7 +120,7 @@ const ButtonModalClientArea = ({ handleCloseMenu }) => {
                 <Controller
                   name="senha"
                   control={control}
-                  defaultValue=""
+                  defaultValue="123"
                   rules={{ required: true }}
                   render={({ field }) => (
                     <InputIcon
