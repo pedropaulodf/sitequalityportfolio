@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactCircleModal } from "react-circle-modal";
 import { FiUser, FiX, FiLock } from "react-icons/fi";
 import { InputIcon } from "../InputIcon";
@@ -10,10 +10,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 import styles from "./styles.module.scss";
 
-const ButtonModalClientArea = () => {
+const ButtonModalClientArea = ({ handleCloseMenu }) => {
   const router = useRouter();
 
-  const [teste, setTeste] = useState(null);
+  const [toggleModalFunc, setToggleModalFunc] = useState(null);
 
   const {
     // register,
@@ -22,20 +22,26 @@ const ButtonModalClientArea = () => {
     formState: { errors },
   } = useForm();
 
+  // Função que cuida de abrir o modal e fechar o menu
+  const handleOpenModal = (onclick) => {
+    handleCloseMenu();
+    return onclick;
+  };
+
   const onSubmit = (formData, onClick) => {
     // alert(JSON.stringify(formData));
-    
+
     // Caso login correto, acessa a página do cliente
-    if(formData.codigo == "teste" && formData.senha == "123"){
+    if (formData.codigo == "teste" && formData.senha == "123") {
       // Seta o estado para fechar o ReactCircleModal
-      setTeste(onClick);
-      
+      setToggleModalFunc(onClick);
+
       // Enviar o usuário para a página do cliente
-      router.push('/areacliente');
+      router.push("/areacliente");
 
       // Limpa todos os toasts
       toast.dismiss();
-      
+
       // Emite o toast
       toast.success("Login efetuado com sucesso!", {
         position: "bottom-center",
@@ -63,7 +69,7 @@ const ButtonModalClientArea = () => {
       });
     }
   };
-  
+
   return (
     <ReactCircleModal
       backgroundColor="#3e7cc5f2"
@@ -71,7 +77,7 @@ const ButtonModalClientArea = () => {
         <button
           type="button"
           className={styles.openButtom}
-          onClick={onClick}
+          onClick={(e) => handleOpenModal(onClick(e))}
           disabled={router.pathname === "/areacliente" ? true : false}
         >
           <FiUser className={styles.iconButton} />
@@ -85,7 +91,11 @@ const ButtonModalClientArea = () => {
       {(onClick) => (
         <div className={styles.modal}>
           <div className={styles.modalBox}>
-            <button onClick={onClick || teste} className={styles.closeButton} type="button">
+            <button
+              onClick={onClick || toggleModalFunc}
+              className={styles.closeButton}
+              type="button"
+            >
               <FiX />
             </button>
             <h6>Área do Cliente</h6>
@@ -112,7 +122,7 @@ const ButtonModalClientArea = () => {
                   rules={{ required: true }}
                   render={({ field }) => (
                     <InputIcon
-                    {...field}
+                      {...field}
                       type="password"
                       placeholder="Senha:"
                       iconComponent={<FiLock />}
