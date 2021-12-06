@@ -6,7 +6,7 @@ import styles from "../styles/Contato.module.scss";
 
 export default function Contato() {
   const {
-    register,
+    // register,
     handleSubmit,
     control,
     formState: { errors },
@@ -16,29 +16,29 @@ export default function Contato() {
     alert(JSON.stringify(formData));
   };
 
-  const beforeMaskedStateChange = (states) => {
+  // const beforeMaskedStateChange = (states) => {
     
-    let { value } = states.currentState;
+  //   let { value } = states.currentState;
 
-    const newValue = value.replace(/[^0-9]/g, "");
-    if (newValue.length < 10) {
-      return states.nextState;
-    }
+  //   const newValue = value.replace(/[^0-9]/g, "");
+  //   if (newValue.length < 10) {
+  //     return states.nextState;
+  //   }
 
-    if (newValue.length === 10) {
-      value = newValue.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
-    } else if (newValue.length > 10) {
-      value = newValue.replace(/^(\d{2})(\d{5})(\d{4})(\d*)$/, "($1) $2-$3");
-    }
+  //   if (newValue.length === 10) {
+  //     value = newValue.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
+  //   } else if (newValue.length > 10) {
+  //     value = newValue.replace(/^(\d{2})(\d{5})(\d{4})(\d*)$/, "($1) $2-$3");
+  //   }
 
-    return {
-      value: value,
-      selection: {
-        start: value.length,
-        end: value.length,
-      },
-    };
-  };
+  //   return {
+  //     value: value,
+  //     selection: {
+  //       start: value.length,
+  //       end: value.length,
+  //     },
+  //   };
+  // };
 
   // https://formsubmit.co/documentation
 
@@ -58,9 +58,6 @@ export default function Contato() {
           <div className={styles.content}>
             <div className={styles.form}>
               <h3>Entre em contato conosco:</h3>
-
-              {/* UTILIZAR O YUP PARA VALIDAÇÃO https://react-hook-form.com/get-started/#SchemaValidation */}
-
               <form onSubmit={handleSubmit(onSubmit)}>
                 <Controller
                   name="assunto"

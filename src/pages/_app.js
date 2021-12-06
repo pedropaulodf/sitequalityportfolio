@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import "../styles/globals.scss";
 import 'react-slideshow-image/dist/styles.css'
+import { ToastContainer } from "react-toastify";
 // import { useRouter } from "next/router";
 
 // o _app RODA TODA VEZ QUE ALGUÉM CLICA NUMA ROTA
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Header />
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   );
 }

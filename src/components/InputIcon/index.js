@@ -6,16 +6,14 @@ export function InputIcon({iconComponent, type, ...rest }) {
 
   return (
     <div className={styles.container}>
-      {/* <div className={`${styles.iconLeft} ${styles.invalidIcon}`}> */}
-      <div className={`${styles.iconLeft}`}>
+      <div className={`${styles.iconLeft} ${rest.error && styles.invalidIcon}`}>
         {iconComponent}
       </div>
       <input
         type={type}
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        // className={`${styles.input} ${styles.invalid}`}
-        className={`${styles.input}`}
+        className={`${styles.input} ${rest.error && styles.invalid}`}
         {...rest}
       />
     </div>

@@ -1,12 +1,13 @@
 import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { FiLogOut } from "react-icons/fi";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
-import { ToastContainer } from "react-toastify";
 import { differenceInCalendarDays, format, parseISO } from "date-fns";
 import { useEffect, useState } from "react";
 import { ButtonDownload } from "../components/ButtonDownload";
+import { useRouter } from "next/router";
+
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 import { copyText } from "../utils/utils";
 import styles from "../styles/AreaCliente.module.scss";
@@ -87,6 +88,9 @@ const CLIENT_DATA = {
 };
 
 export default function Sobre() {
+
+  const router = useRouter();
+
   const [diasRestantesValidadeChave, setDiasRestantesValidadeChave] =
     useState(0);
   const [clientData, setClientData] = useState({});
@@ -124,6 +128,10 @@ export default function Sobre() {
     setLoading(false);
   }, []);
 
+  const handleClickButtonExit = () => {
+    router.push('/');
+  }
+
   return (
     <>
       <Head>
@@ -148,7 +156,7 @@ export default function Sobre() {
                 <h3>
                   Bem-vindo, <span>{clientData?.nome}</span>!
                 </h3>
-                <button type="button">
+                <button type="button" onClick={() => handleClickButtonExit()}>
                   <div>
                     <FiLogOut />
                   </div>
@@ -310,7 +318,6 @@ export default function Sobre() {
       )}
 
       <Footer />
-      <ToastContainer />
     </>
   );
 }
