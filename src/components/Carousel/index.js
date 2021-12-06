@@ -25,19 +25,16 @@ export const Carousel = (props) => {
   return (
     <>
       <Rerousel itemRef={customerLogo} interval={props.interval}>
-        {CLIENTS_LOGOS.map((logo, i) => (
-          <>
-            <span data-tooltip={logo.name} data-flow="top">
-              <img
-                key={i}
-                src={logo.imagePath}
-                ref={customerLogo}
-                data-tooltip="Tooltip help here!"
-                data-flow="top"
-                className={styles.clientLogo}
-              />
-            </span>
-          </>
+        {CLIENTS_LOGOS.map((logo, index) => (
+          <span data-tooltip={logo.name} data-flow="top" key={index}>
+            <img
+              src={logo.imagePath}
+              ref={customerLogo}
+              data-tooltip="Tooltip help here!"
+              data-flow="top"
+              className={styles.clientLogo}
+            />
+          </span>
         ))}
       </Rerousel>
     </>

@@ -17,12 +17,6 @@
 
   margin-top: 4rem;
 
-  h6 {
-    width: 100%;
-    text-align: center;
-    font-size: 1.8rem;
-    color: #3A75BB;
-  }
   .modalBox {
 
     position: relative;
@@ -81,12 +75,22 @@
         height: 20px;
       }
     }
+    
+    h6 {
+      width: 100%;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #3A75BB;
+    }
   
-    .inputBox{
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-top: 1.3rem;
+    form {
+      .inputBox{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1.3rem;
+      }
+
     }
   }
 }

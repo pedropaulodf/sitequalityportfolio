@@ -104,14 +104,15 @@ const ButtonModalClientArea = ({ handleCloseMenu }) => {
                 <Controller
                   name="codigo"
                   control={control}
+                  defaultValue=""
                   rules={{ required: true }}
                   render={({ field }) => (
                     <InputIcon
-                      {...field}
                       type="text"
                       placeholder="Código do cliente:"
                       iconComponent={<FiUser />}
                       error={errors.codigo}
+                      {...field}
                     />
                   )}
                 />
@@ -119,14 +120,15 @@ const ButtonModalClientArea = ({ handleCloseMenu }) => {
                 <Controller
                   name="senha"
                   control={control}
+                  defaultValue=""
                   rules={{ required: true }}
                   render={({ field }) => (
                     <InputIcon
-                      {...field}
                       type="password"
                       placeholder="Senha:"
                       iconComponent={<FiLock />}
                       error={errors.senha}
+                      {...field}
                     />
                   )}
                 />
