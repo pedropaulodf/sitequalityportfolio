@@ -8,16 +8,20 @@ const SlideShow = () => {
   const slideRef = useRef();
 
   const slideImages = [
-    "/images/sliderHome/banner1.png",
-    "/images/sliderHome/banner1.png",
-    "/images/sliderHome/banner1.png",
-    "/images/sliderHome/banner1.png",
-    "/images/sliderHome/banner1.png",
-    "/images/sliderHome/banner1.png",
+    "/images/sliderHome/banner1.webp",
+    "/images/sliderHome/banner2.webp",
+    "/images/sliderHome/banner3.webp",
+    "/images/sliderHome/banner4.webp",
+    "/images/sliderHome/banner5.webp",
+    "/images/sliderHome/banner6.webp",
+    "/images/sliderHome/banner7.webp",
+    "/images/sliderHome/banner8.webp",
+    "/images/sliderHome/banner9.webp",
+    "/images/sliderHome/banner10.webp",
   ];
 
   const properties = {
-    duration: 5000,
+    duration: 500000,
     transitionDuration: 500,
     infinite: true,
     indicators: true,

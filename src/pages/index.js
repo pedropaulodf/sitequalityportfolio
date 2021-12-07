@@ -78,6 +78,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Botão CTA */}
+        <div className={styles.btnGreenContact}>
+          <ButtonGreen href="/contato" text="Clique aqui e agende uma demonstração!"/>
+        </div>
+
         {/* DIFERENCIAIS */}
         <section className={styles.wrapperDiferentials}>
           <div className={styles.content}>
@@ -114,9 +119,9 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Botão */}
+      {/* Botão CTA */}
       <div className={styles.btnGreenContact}>
-        <ButtonGreen href="/contato" text="Clique aqui para agendar uma conversa"/>
+        <ButtonGreen href="/contato" text="Clique aqui e agende uma demonstração!"/>
       </div>
 
       <Footer />
