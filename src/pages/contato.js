@@ -4,6 +4,7 @@ import { Footer } from "../components/Footer";
 import HeadCustom from "../components/HeadCustom";
 import { Input } from "../components/Input";
 import styles from "../styles/Contato.module.scss";
+import { toastError, toastSuccess } from "../utils/reactToastify";
 
 export default function Contato() {
   const {
@@ -14,11 +15,46 @@ export default function Contato() {
   } = useForm();
 
   const onSubmit = (formData) => {
-    alert(JSON.stringify(formData));
+    // alert(JSON.stringify(formData));
+
+    // fetch("https://formsubmit.co/ajax/seueemailaqui@email.com", {
+    fetch("https://formsubmit.co/ajax/297b0b7ab78bd0b12cca451561925b3d", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        _subject: "Novo e-mail enviado do site QualitySys",
+        nome: formData.nome,
+        email: formData.email,
+        telefone: formData.telefone,
+        assunto: formData.assunto,
+        mensagem: formData.mensagem,
+        pais: formData.pais,
+        estado: formData.estado,
+        cidade: formData.cidade,
+        // _cc: "email1@gmail.com,email2@gmail.com"
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if(data && data.success){
+          toastSuccess("E-mail enviado!", 3000);
+        }
+      }
+      
+      )
+      .catch((error) => {
+        console.log(error);
+        if(error){
+          toastError("E-mail não foi enviado!", 3000);
+        }
+      });
   };
 
   // const beforeMaskedStateChange = (states) => {
-    
+
   //   let { value } = states.currentState;
 
   //   const newValue = value.replace(/[^0-9]/g, "");

@@ -9,6 +9,7 @@ import { toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "./styles.module.scss";
+import { toastError, toastSuccess } from "../../utils/reactToastify";
 
 const ButtonModalClientArea = ({ handleCloseMenu }) => {
   const router = useRouter();
@@ -43,30 +44,10 @@ const ButtonModalClientArea = ({ handleCloseMenu }) => {
       toast.dismiss();
 
       // Emite o toast
-      toast.success("Login efetuado com sucesso!", {
-        position: "bottom-center",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        transition: Slide,
-        theme: "colored",
-      });
+      toastSuccess("Login efetuado com sucesso!", 2000);
     } else {
       // Emite o toast
-      toast.error("Código ou Senha inválido(s)!", {
-        position: "bottom-center",
-        autoClose: 3500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        transition: Slide,
-        theme: "colored",
-      });
+      toastError("Código ou Senha inválido(s)!");
     }
   };
 
