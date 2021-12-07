@@ -1,5 +1,22 @@
-.clientLogo{
+.clientLogo {
   // filter: grayscale(1);
   width: 120px;
   border-radius: 0.5rem;
+}
+
+.leftGradient {
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(90deg, #f7fafd 20%, transparent 90%);
+  z-index: 101;
+}
+.rightGradient {
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: linear-gradient(90deg, transparent 20%, #f7fafd 100%);
+  z-index: 101;
 }

@@ -25,6 +25,7 @@ export const Carousel = (props) => {
   return (
     <>
       <Rerousel itemRef={customerLogo} interval={props.interval}>
+        <div className={styles.leftGradient}></div>
         {CLIENTS_LOGOS.map((logo, index) => (
           <span data-tooltip={logo.name} data-flow="top" key={index}>
             <img
@@ -37,6 +38,7 @@ export const Carousel = (props) => {
             />
           </span>
         ))}
+        <div className={styles.rightGradient}></div>
       </Rerousel>
     </>
   );

@@ -21,7 +21,7 @@ const SlideShow = () => {
   ];
 
   const properties = {
-    duration: 500000,
+    duration: 3000,
     transitionDuration: 500,
     infinite: true,
     indicators: true,
