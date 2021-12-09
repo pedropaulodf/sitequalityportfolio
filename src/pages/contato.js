@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useForm, Controller } from "react-hook-form";
 import { Footer } from "../components/Footer";
+import GoogleMapQuality from "../components/GoogleMapQuality";
 import HeadCustom from "../components/HeadCustom";
 import { Input } from "../components/Input";
 import styles from "../styles/Contato.module.scss";
@@ -39,15 +40,13 @@ export default function Contato() {
     })
       .then((response) => response.json())
       .then((data) => {
-        if(data && data.success){
+        if (data && data.success) {
           toastSuccess("E-mail enviado!", 3000);
         }
-      }
-      
-      )
+      })
       .catch((error) => {
         console.log(error);
-        if(error){
+        if (error) {
           toastError("E-mail não foi enviado!", 3000);
         }
       });
@@ -228,7 +227,7 @@ export default function Contato() {
           </div>
 
           <div className={styles.map}>
-            <img src="/images/map-placeholder.webp" alt="Mapa temporário" />
+            <GoogleMapQuality />
           </div>
         </section>
       </main>
