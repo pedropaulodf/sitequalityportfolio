@@ -85,7 +85,7 @@ export function Header() {
             </li>
           </ul>
 
-          <ul>
+          {/* <ul>
             <li>
               <Link href="/produtos">
                 <a
@@ -98,7 +98,7 @@ export function Header() {
                 </a>
               </Link>
             </li>
-          </ul>
+          </ul> */}
 
           <ul>
             <li>

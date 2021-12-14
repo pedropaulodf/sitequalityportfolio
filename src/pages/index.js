@@ -109,7 +109,7 @@ export default function Home() {
             <div className={styles.grid}>
               <div className={styles.imgResources}>
                 <img src="/images/recursos.webp" alt="Recursos" />
-                <ButtonOutlined href="/produtos" text="Veja todos os produtos" />
+                {/* <ButtonOutlined href="/produtos" text="Veja todos os produtos" /> */}
               </div>
               <div>
                 <AccordionRA />
