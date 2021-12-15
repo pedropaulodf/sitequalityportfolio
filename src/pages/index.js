@@ -55,11 +55,11 @@ export default function Home() {
             <div className={styles.info}>
               <h1>App do Sócio</h1>
               <p>
-                Tenha o aplicativo personalizado do seu clube, que proporciona
+                Tenha o <strong>aplicativo personalizado</strong> do seu clube, que proporciona
                 aos seus sócios vários benefícios e facilidades, como: gerenciar
                 seus dados de pagamentos, dependentes, dados pessoais, notícias
-                do clube. O App do Sócio gera ao seu clube a confiança e
-                agilidade que seu clube precisa!
+                do clube e muito mais. O App do Sócio gera a <strong>confiança</strong> e
+                <strong> agilidade</strong> que seu clube precisa!
               </p>
               <p>
                 <strong>Alguns recursos do App do Sócio:</strong>
@@ -67,9 +67,9 @@ export default function Home() {
                   <li>Aplicativos disponíveis para Android e iOS.</li>
                   <li>Carteirinha digital, via QR Code, na palma da mão.</li>
                   <li>Gerenciar as carteirinhas dos dependentes do sócio.</li>
-                  <li>Gerenciar débitos diretamente do seu celular.</li>
+                  <li>Gerenciar todos os débitos diretamente do celular.</li>
                   <li>
-                    Habilitar o FaceID ou TouchID para maior segurança no acesso
+                    Recurso de FaceID ou TouchID para maior segurança no acesso
                     do app.
                   </li>
                 </ul>
