@@ -4,20 +4,21 @@ import { ButtonCircleArrow } from "../ButtonCircleArrow";
 
 import styles from './styles.module.scss';
 
-const SlideShow = () => {
+const SlideShowVertical = () => {
   const slideRef = useRef();
 
   const slideImages = [
-    "/images/sliderHomeSistema/banner1.webp",
-    "/images/sliderHomeSistema/banner2.webp",
-    "/images/sliderHomeSistema/banner3.webp",
-    "/images/sliderHomeSistema/banner4.webp",
-    "/images/sliderHomeSistema/banner5.webp",
-    "/images/sliderHomeSistema/banner6.webp",
-    "/images/sliderHomeSistema/banner7.webp",
-    "/images/sliderHomeSistema/banner8.webp",
-    "/images/sliderHomeSistema/banner9.webp",
-    "/images/sliderHomeSistema/banner10.webp",
+    "/images/sliderHomeApp/banner8.webp",
+    "/images/sliderHomeApp/banner9.webp",
+    "/images/sliderHomeApp/banner10.webp",
+    "/images/sliderHomeApp/banner11.webp",
+    "/images/sliderHomeApp/banner1.webp",
+    "/images/sliderHomeApp/banner2.webp",
+    "/images/sliderHomeApp/banner3.webp",
+    "/images/sliderHomeApp/banner4.webp",
+    "/images/sliderHomeApp/banner5.webp",
+    "/images/sliderHomeApp/banner6.webp",
+    "/images/sliderHomeApp/banner7.webp",
   ];
 
   const properties = {
@@ -34,7 +35,7 @@ const SlideShow = () => {
       <Fade ref={slideRef} {...properties}>
         {slideImages.map((each, index) => (
             <div key={index} className="each-slide" style={{height: '100%'}}>
-              <img src={each} alt="Banner Sistema Quality" style={{height: '100%',width: '100%',objectFit: 'fill'}}/>
+              <img src={each} alt="Print App do Sócio" style={{height: '100%',width: '100%',objectFit: 'fill'}}/>
             </div>
           ))}
       </Fade>
@@ -42,4 +43,4 @@ const SlideShow = () => {
   );
 };
 
-export default SlideShow;
+export default SlideShowVertical;

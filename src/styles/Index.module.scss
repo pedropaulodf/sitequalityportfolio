@@ -68,6 +68,79 @@
     }
   }
 
+  // Faixa App do Socio
+  .wrapperSliderApp {
+    width: 100%;
+    background-color: var(--blue-20); //20
+
+    .strip {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      grid-template-areas: "sliderWrapper info";
+      gap: 0 4rem;
+
+      .info {
+        align-self: center;
+        grid-area: info;
+        h1 {
+          font-size: 3rem;
+          color: var(--blue-500);
+          line-height: 4rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+          color: var(--gray-600);
+          margin: 1rem 0;
+
+          ul {
+            margin-top: 1rem;
+            margin-left: 1.3rem;
+            font-size: 1.2rem;
+          }
+        }
+
+        .appStoreBadges {
+          display: flex;
+          gap: 1rem;
+          margin-top: 3rem;
+          a {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .sliderWrapper {
+        grid-area: sliderWrapper;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bgSliderCircle {
+          width: 100%;
+          min-width: 400px;
+          height: 120%;
+          border-radius: 100%;
+
+          background-color: #3e7cc510;
+
+          position: absolute;
+          z-index: 0;
+        }
+      }
+    }
+  }
+
   // Faixa Clientes da Quality
   .wrapperCustomers {
     width: 100%;
@@ -223,6 +296,22 @@
           .bgSliderCircle {
             width: 90vw;
             height: 110%;
+            min-width: 100%;
+          }
+        }
+      }
+    }
+
+    .wrapperSliderApp {
+      .strip {
+        padding: 4rem 2rem;
+        grid-template-columns: 1fr;
+        gap: 3rem 0;
+        grid-template-areas: "info" "sliderWrapper";
+  
+        .sliderWrapper {  
+          .bgSliderCircle {
+            width: 100%;
             min-width: 100%;
           }
         }
