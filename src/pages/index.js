@@ -122,7 +122,7 @@ export default function Home() {
               <BoxNumber
                 topBox="2"
                 title="Completo"
-                content="Em todos os seus relatórios, o sistema oferece diversas opções para seleção de registros, seqüências de ordenações e formas de totalização."
+                content="Em todos os seus relatórios, o sistema oferece diversas opções para seleção de registros, sequências de ordenações e formas de totalização."
               />
               <BoxNumber
                 topBox="3"
@@ -154,7 +154,7 @@ export default function Home() {
               <BoxIconLeft
                 icon={<FiSliders />}
                 title="Alta Parametrização"
-                content="O sistema foi desenvolvido para se adaptar à todas as necessidades, com um alto nível de parametrização, atendendo a todas as exigências."
+                content="O sistema foi desenvolvido para se adaptar à todas as necessidades, com um alto nível de parametrização, atendendo a todas as exigências do seu negócio."
               />
             </div>
           </div>
