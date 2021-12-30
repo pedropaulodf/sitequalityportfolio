@@ -7,20 +7,9 @@ import "../styles/globals/globals.scss";
 import "../styles/globals/reactTelInput.scss";
 import "../styles/globals/toolTip.scss";
 import 'react-slideshow-image/dist/styles.css';
-import 'animate.css';
-
-// import aos styles
-import 'aos/dist/aos.css';
 
 // o _app RODA TODA VEZ QUE ALGUÉM CLICA NUMA ROTA
 function MyApp({ Component, pageProps }) {
-
-  useEffect(() => {
-    // here you can add your aos options
-    AOS.init({
-      offset: 100,
-    });
-  }, []);
 
   // const router = useRouter();
 

@@ -201,7 +201,7 @@ export default function Contato() {
                 <button type="submit">Enviar contato</button>
               </form>
             </div>
-            <div className={styles.contact} data-aos="fade-up" data-aos-delay="200">
+            <div className={styles.contact}>
               <h3>Endereço</h3>
               <p>
                 <strong>Quality Systems LTDA</strong>
