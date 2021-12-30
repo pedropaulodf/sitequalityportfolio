@@ -16,12 +16,12 @@ export default function Home() {
   return (
     <>
       <HeadCustom pageName="Início" />
-
+      
       <main className={styles.container}>
         {/* BANNER */}
         <section className={styles.wrapperBanner}>
           <div className={styles.banner}>
-            <div className={styles.info}>
+            <div className={`${styles.info} animate__animated animate__fadeInLeft`}>
               <h1>Quality Automação de Clubes</h1>
               <p>
                 <strong>Desde 1990</strong> oferecendo{" "}
@@ -34,7 +34,7 @@ export default function Home() {
                 <button type="button">Clique e saiba mais</button>
               </a>
             </div>
-            <div className={styles.sliderWrapper}>
+            <div className={`${styles.sliderWrapper} animate__animated animate__fadeInRight`}>
               <div className={styles.bgSliderCircle}></div>
               <div className={styles.slider}>
                 <SlideShow />
@@ -46,13 +46,13 @@ export default function Home() {
         {/* APP DO SOCIO */}
         <section className={styles.wrapperSliderApp}>
           <div className={styles.strip}>
-            <div className={styles.sliderWrapper}>
+            <div className={`${styles.sliderWrapper} animate__animated animate__fadeInLeft`}>
               {/* <div className={styles.bgSliderCircle}></div> */}
               <div className={styles.slider}>
                 <SlideShowVertical />
               </div>
             </div>
-            <div className={styles.info}>
+            <div className={`${styles.info} animate__animated animate__fadeInRight`}>
               <h1>App do Sócio</h1>
               <p>
                 Tenha o <strong>aplicativo personalizado</strong> do seu clube, que proporciona
@@ -97,7 +97,7 @@ export default function Home() {
         </section>
 
         {/* CLIENTES QUALITY */}
-        <section className={styles.wrapperCustomers}>
+        <section className={styles.wrapperCustomers} data-aos="fade-left" data-aos-delay="200">
           <div className={styles.content}>
             <h3>Clientes que confiam na Quality!</h3>
             <div className={styles.sliderWrapper}>
@@ -117,16 +117,22 @@ export default function Home() {
                 topBox="1"
                 title="Flexível"
                 content="A sua flexibilidade, resultado de um alto nível de parametrização, permite que ele se adapte às características de cada clube, atendendo a todas as exigências do estatuto."
+                data-aos="fade-up"
+                data-aos-delay="0"
               />
               <BoxNumber
                 topBox="2"
                 title="Completo"
                 content="Em todos os seus relatórios, o sistema oferece diversas opções para seleção de registros, seqüências de ordenações e formas de totalização."
+                data-aos="fade-up"
+                data-aos-delay="500"
               />
               <BoxNumber
                 topBox="3"
                 title="Confiável"
                 content="Anos de experiência de atuação no mercado inseridos em um software robusto e confiável usado por mais de 200 clientes únicos espalhados pelo país."
+                data-aos="fade-up"
+                data-aos-delay="1000"
               />
             </div>
           </div>
@@ -149,11 +155,15 @@ export default function Home() {
                 icon={<FiThumbsUp />}
                 title="Suporte garantido!"
                 content="Conte com nosso suporte com anos de experiência e treinamento completo para utilização do sistema."
+                data-aos="fade-right"
+                data-aos-delay="500"
               />
               <BoxIconLeft
                 icon={<FiSliders />}
                 title="Alta Parametrização"
                 content="O sistema foi desenvolvido para se adaptar à todas as necessidades, com um alto nível de parametrização, atendendo a todas as exigências."
+                data-aos="fade-left"
+                data-aos-delay="500"
               />
             </div>
           </div>
@@ -164,11 +174,11 @@ export default function Home() {
           <div className={styles.content}>
             <h3>Conheça os Recursos</h3>
             <div className={styles.grid}>
-              <div className={styles.imgResources}>
+              <div className={styles.imgResources} data-aos="fade-left" data-aos-delay="500">
                 <img src="/images/recursos.webp" alt="Recursos" />
                 {/* <ButtonOutlined href="/produtos" text="Veja todos os produtos" /> */}
               </div>
-              <div>
+              <div data-aos="fade-right" data-aos-delay="500">
                 <AccordionRA />
               </div>
             </div>

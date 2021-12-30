@@ -1,9 +1,9 @@
 import styles from './styles.module.scss'
 
-export function BoxIconLeft({icon, title, content}){
+export function BoxIconLeft({icon, title, content, ...rest}){
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} {...rest}>
       <div className={styles.icon}>
         {icon}
       </div>

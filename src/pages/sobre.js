@@ -24,7 +24,7 @@ export default function Sobre() {
         <section className={styles.wrapper}>
           <h2>Sobre</h2>
           <div className={styles.content}>
-            <div className={styles.about}>
+            <div className={styles.about} data-aos="fade-left" data-aos-delay="200">
               <h3>A Quality Systems</h3>
               <p>
                 Desde a sua fundação em 1990, a Quality Systems vem oferecendo
@@ -40,7 +40,7 @@ export default function Sobre() {
                 soluções customizadas com atendimento personalizado.
               </p>
             </div>
-            <div className={styles.focus}>
+            <div className={styles.focus} data-aos="fade-right" data-aos-delay="500">
               <h3>Nosso Foco:</h3>
               <h4>Suporte & Qualidade</h4>
               <p>
@@ -53,7 +53,7 @@ export default function Sobre() {
               </p>
             </div>
           </div>
-          <div className={styles.technologies}>
+          <div className={styles.technologies} data-aos="fade-up" data-aos-delay="800">
             <h3>Tecnologias</h3>
             <div className={styles.techLogoBox}>
               {TECH_LOGOS.map((tech, index) => (
