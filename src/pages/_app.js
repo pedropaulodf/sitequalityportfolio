@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
 import { Header } from "../components/Header";
 import { ToastContainer } from "react-toastify";
 // import { useRouter } from "next/router";
