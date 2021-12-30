@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FiSliders, FiThumbsUp } from "react-icons/fi";
+
 import { BoxIconLeft } from "../components/BoxIconLeft";
 import { BoxNumber } from "../components/BoxNumber";
 import { AccordionRA } from "../components/AccordionRA";
@@ -7,10 +9,9 @@ import { ButtonGreen } from "../components/ButtonGreen";
 import { Carousel } from "../components/Carousel";
 import SlideShow from "../components/SlideShow";
 import SlideShowVertical from "../components/SlideShowVertical";
-import { FiSliders, FiThumbsUp } from "react-icons/fi";
+import HeadCustom from "../components/HeadCustom";
 
 import styles from "../styles/Index.module.scss";
-import HeadCustom from "../components/HeadCustom";
 
 export default function Home() {
   return (

@@ -1,11 +1,12 @@
-import Head from "next/head";
 import { useForm, Controller } from "react-hook-form";
+import { toastError, toastSuccess } from "../utils/reactToastify";
+
 import { Footer } from "../components/Footer";
+import { Input } from "../components/Input";
 import GoogleMapQuality from "../components/GoogleMapQuality";
 import HeadCustom from "../components/HeadCustom";
-import { Input } from "../components/Input";
+
 import styles from "../styles/Contato.module.scss";
-import { toastError, toastSuccess } from "../utils/reactToastify";
 
 export default function Contato() {
   const {
