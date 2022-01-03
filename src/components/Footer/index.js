@@ -14,7 +14,7 @@ export function Footer() {
       <div className={styles.bgRights}>
         <p>
           © Quality Systems LTDA • {new Date().getFullYear()} • Todos os direitos
-          reservados •  
+          reservados • 
           <Link href="/novo/privacidade.html">
             <a> Política de privacidade </a>
           </Link>
