@@ -2,7 +2,7 @@
 
 Site desenhado e desenvolvido por mim. :grinning:
 
-A empresa possuia um site antigo e resolvi criar um novo, com um layout moderno, bonito, responsivo, rápido e que fosse altamente indexado pelos motores de busca.
+A empresa possuía um site antigo e resolvi criar um novo, com um layout moderno, bonito, responsivo, rápido e que fosse altamente indexado pelos motores de busca.
 
 Ver projetos: 
 
