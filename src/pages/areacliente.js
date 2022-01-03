@@ -17,21 +17,21 @@ import fileIcons from "../utils/fileIcons.json";
 
 // Objeto com os dados do cliente
 const CLIENT_DATA = {
-  nome: "Caiçaras Country Clube",
+  nome: "Pedro Paulo Country Clube",
   licenca: {
     chave: "AAAA-BBBB-CCCC-DDDD-X",
     dataVencimentoChave: "2022-02-15T00:00:00",
   },
   arquivos: [
     {
-      nome: "Mysql-connector-odbc-5.1.5-win32",
+      nome: "Mysql-connector-odbc-win32",
       tamanho: "4.1 MB",
       tipo: ".msi",
       ultimaModificacao: "04/01/2016 20:43",
       linkDownload: "#",
     },
     {
-      nome: "FS USB Driver Ver4015 Setup",
+      nome: "FS USB Setup",
       tamanho: "198.0 KB",
       tipo: ".zip",
       ultimaModificacao: "05/02/2016 12:25",
@@ -52,37 +52,37 @@ const CLIENT_DATA = {
       linkDownload: "#",
     },
     {
-      nome: "GESTAO",
+      nome: "PROJETO",
       tamanho: "54.6 MB",
       tipo: ".rar",
       ultimaModificacao: "12/07/2017 08:02",
       linkDownload: "#",
     },
     {
-      nome: "Atualizacao Quality v50",
+      nome: "Atualizacao Sistema v50",
       tamanho: "54.6 MB",
       tipo: ".exe",
       ultimaModificacao: "25/10/2021 18:19",
       linkDownload: "#",
     },
     {
-      nome: "Atualizacao Quality v50",
+      nome: "Atualizacao Sistema v50",
       tamanho: "54.6 MB",
       tipo: ".ai",
-      ultimaModificacao: "25/10/2021 18:19",
+      ultimaModificacao: "25/10/2021 18:38",
       linkDownload: "#",
     },
   ],
   clienteDados: [
-    { label: "Razão Social", value: "Caiçaras Country Clube" },
-    { label: "Endereço", value: "R. Major Gote, 1199" },
-    { label: "Bairro", value: "Alto Caiçaras" },
+    { label: "Razão Social", value: "Pedro Paulo Country Clube" },
+    { label: "Endereço", value: "R. José Júnior, 2568" },
+    { label: "Bairro", value: "Alto Brasília" },
     { label: "Cidade - UF", value: "Patos de Minas - MG" },
-    { label: "CEP", value: "38702-054" },
-    { label: "Telefone", value: "(34) 3818-7400" },
+    { label: "CEP", value: "38000-054" },
+    { label: "Telefone", value: "(34) 3131-5657" },
     {
       label: "E-mail de contato",
-      value: "financeirocaicaras@clubecaicaras.com.br",
+      value: "contato@pedropauloclube.com.br",
     },
   ],
 };
