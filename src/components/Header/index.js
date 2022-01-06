@@ -10,6 +10,7 @@ export function Header() {
   const router = useRouter();
 
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false);
+  const [isDarkModeActive, setIsDarkModeActive] = useState(false);
   const [sizeScreen, setSizeScreen] = useState({
     width: undefined,
     height: undefined,
@@ -25,8 +26,20 @@ export function Header() {
     handleResize();
     window.addEventListener("resize", handleResize);
 
+    // dark mode is active?
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setIsDarkModeActive(true);
+    }
+
+    const handleDarkMode = (e) => {
+      const newColorScheme = e.matches ? "dark" : "light";
+      setIsDarkModeActive(newColorScheme === "dark" ? true : false);
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleDarkMode);
+    
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("change", handleDarkMode);
     };
   }, []);
 
@@ -44,13 +57,14 @@ export function Header() {
     setIsResponsiveMenuOpen((open) => !open);
   };
 
+
   return (
     <header className={styles.header}>
       <div className={styles.header__content}>
         <div className={styles.header__content__logo}>
           <Link href="/">
             <a>
-              <img src="/images/logo.webp" alt="Logo Quality Systems" />
+              <img src={isDarkModeActive ? "/images/logoWhite.webp" : "/images/logo.webp" }alt="Logo Quality Systems" />
             </a>
           </Link>
         </div>
