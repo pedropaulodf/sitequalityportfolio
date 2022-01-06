@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 import ButtonModalClientArea from "../ButtonModalClientArea";
 
 import styles from "./styles.module.scss";
@@ -26,20 +26,22 @@ export function Header() {
     handleResize();
     window.addEventListener("resize", handleResize);
 
-    // dark mode is active?
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setIsDarkModeActive(true);
+    // TEMA
+
+    // Verifica se é a primeira vez que a pessoa acessa e seta o tema no storage como light, que é o tema padrão
+    const temeSelected = localStorage.getItem("theme");
+    if (temeSelected === null) {
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.dataset.theme = temeSelected;
+      if (temeSelected === "dark") {
+        setIsDarkModeActive(true);
+      }
     }
 
-    const handleDarkMode = (e) => {
-      const newColorScheme = e.matches ? "dark" : "light";
-      setIsDarkModeActive(newColorScheme === "dark" ? true : false);
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleDarkMode);
-    
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("change", handleDarkMode);
+      // window.removeEventListener("change", handleDarkMode);
     };
   }, []);
 
@@ -49,14 +51,28 @@ export function Header() {
     }
   }, [sizeScreen.width, isResponsiveMenuOpen]);
 
+  useEffect(() => {
+    if (isDarkModeActive) {
+      localStorage.setItem("theme", "dark");
+      document.body.dataset.theme = "dark";
+    } else {
+      localStorage.setItem("theme", "light");
+      document.body.dataset.theme = "light";
+    }
+
+    return () => {};
+  }, [isDarkModeActive]);
+
   const menuToggleHandler = () => {
-    if((!sizeScreen.width || sizeScreen.width > 1020) && isResponsiveMenuOpen) {
+    if (
+      (!sizeScreen.width || sizeScreen.width > 1020) &&
+      isResponsiveMenuOpen
+    ) {
       setIsResponsiveMenuOpen(false);
       return;
     }
     setIsResponsiveMenuOpen((open) => !open);
   };
-
 
   return (
     <header className={styles.header}>
@@ -64,7 +80,14 @@ export function Header() {
         <div className={styles.header__content__logo}>
           <Link href="/">
             <a>
-              <img src={isDarkModeActive ? "/images/logoWhite.webp" : "/images/logo.webp" }alt="Logo Quality Systems" />
+              <img
+                src={
+                  isDarkModeActive
+                    ? "/images/logoWhite.webp"
+                    : "/images/logo.webp"
+                }
+                alt="Logo Quality Systems"
+              />
             </a>
           </Link>
         </div>
@@ -73,6 +96,20 @@ export function Header() {
             isResponsiveMenuOpen ? styles.isMenu : ""
           }`}
         >
+          <ul>
+            <li>
+              {isDarkModeActive ? (
+                <div className={styles.themeColor} onClick={() => setIsDarkModeActive(false)}>
+                  <FiSun color="#ffffff"/>
+                </div>
+              ) : (
+                <div className={styles.themeColor} onClick={() => setIsDarkModeActive(true)}>
+                  <FiMoon />
+                </div>
+              )}
+            </li>
+          </ul>
+
           <ul>
             <li>
               <Link href="/">
