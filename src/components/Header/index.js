@@ -112,7 +112,7 @@ export function Header() {
           <ul>
             <li>
               {isDarkModeActive ? (
-                <div className={styles.themeColor} onClick={() => setIsDarkModeActive(false)} data-tooltip={"Tem claro"} data-flow="left" >
+                <div className={styles.themeColor} onClick={() => setIsDarkModeActive(false)} data-tooltip={"Tema claro"} data-flow="left" >
                   <FiSun color="#ffffff"/>
                 </div>
               ) : (
