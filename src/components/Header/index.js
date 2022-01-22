@@ -138,7 +138,7 @@ export function Header() {
 
           <ul>
             <li>
-              <Link href="/sobre">
+              <Link href="/sobre" prefetch>
                 <a
                   className={router.pathname === "/sobre" ? styles.active : ""}
                   onClick={menuToggleHandler}
@@ -151,7 +151,7 @@ export function Header() {
 
           <ul>
             <li>
-              <Link href="/produtos">
+              <Link href="/produtos" prefetch>
                 <a
                   className={
                     router.pathname === "/produtos" ? styles.active : ""
@@ -166,7 +166,7 @@ export function Header() {
 
           <ul>
             <li>
-              <Link href="/contato">
+              <Link href="/contato" prefetch>
                 <a
                   className={
                     router.pathname === "/contato" ? styles.active : ""
