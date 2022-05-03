@@ -84,7 +84,7 @@ export default function Home() {
                     />
                   </a>
                 </Link>
-                <Link href="https://apps.apple.com/gb/developer/quality-systems/id1531946818#see-all/i-phone-apps">
+                <Link href="https://apps.apple.com/br/developer/quality-systems/id1531946818?see-all=i-phone-apps">
                   <a target="_blank" rel="noreferrer">
                     <img
                       src="/images/appStoreBadge.png"
