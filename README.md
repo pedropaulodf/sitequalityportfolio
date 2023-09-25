@@ -1,6 +1,6 @@
 # :desktop_computer: :iphone: Site da empresa Quality Systems
 
-Site desenhado e desenvolvido por mim. 👍
+Site desenhado e desenvolvido por mim.
 
 <p align="center">
   <img alt="Print do projeto" src=".github/img1.jpg" width="100%">
